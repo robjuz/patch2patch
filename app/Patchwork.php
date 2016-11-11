@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Patchwork extends Model
 {
-    protected $table = 'patchwork';
-    protected $fillable = 'content';
+    protected $table = 'patchworks';
+    protected $fillable = ['content'];
 }
