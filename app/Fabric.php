@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Patchwork extends Model
+class Fabric extends Model
 {
-    protected $table = 'patchwork';
+    protected $table = 'fabric';
 
     public function patches()
     {
