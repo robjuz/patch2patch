@@ -17,12 +17,12 @@
 	</div>
 	<div id="menu">
 		<div class="menuitem active">
-			<a>
+			<a href="<% action('PatchworkController@create') %>">
 				Projektowanie
 			</a>
 		</div>
 		<div class="menuitem">
-			<a>
+			<a href="<% action('PatchworkController@index') %>">
 				Galeria
 			</a>
 		</div>
@@ -44,8 +44,7 @@
 	<div class="sidebar-left">
 	</div>
 
-	<div class="patchwork">
-	</div>
+	 @yield('content')
 
 </main>
 

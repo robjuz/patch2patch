@@ -14,7 +14,7 @@ class PatchworkController extends Controller
      */
     public function index()
     {
-        //
+        return view('gallery');
     }
 
     /**
@@ -24,7 +24,7 @@ class PatchworkController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
