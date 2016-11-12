@@ -14,7 +14,8 @@ class PatchworkController extends Controller
      */
     public function index()
     {
-        return view('gallery');
+        $patchworks = Patchwork::get();
+        return view('gallery', compact('patchworks'));
     }
 
     /**

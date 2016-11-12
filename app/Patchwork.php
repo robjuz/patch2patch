@@ -12,4 +12,9 @@ class Patchwork extends Model
     {
         return $this->hasMany('App\Patch');
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }
