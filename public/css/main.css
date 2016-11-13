@@ -143,12 +143,15 @@ footer span{
 }
 #patch-list svg {
 	float: left;
-	width: 50%;
+	width: 45%;
 	height: auto;
+	padding: 2px;
 }
-#patch-list svg.active {
-	background-color: blue;
-	padding: 3px;
+
+.current{
+	padding: 0 !important;
+	border: 2px dashed #800000;
+	background-color: #fafad2;
 }
 
 #fabric-list {
@@ -169,11 +172,6 @@ footer span{
 	margin: 5px;
 	border: 1px solid black;
 	float: left;
-}
-
-#fabric-list .fabric.current{
-	border: 2px dashed #800000;
-	background-color: #fafad2;
 }
 
 #fabric-list .fabric span{
