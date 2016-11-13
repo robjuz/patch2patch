@@ -9,6 +9,7 @@ $(document).ready(function(){
     $('#patch-list svg').click(function(){
         var x = 4;
         var y = 4;
+        $(this).addClass("current");
 
         x = +prompt('Ile elementów ma być w poziomie?');
         y = +prompt('Ile elementów ma być w pionie?');
