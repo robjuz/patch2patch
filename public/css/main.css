@@ -137,9 +137,38 @@ footer span{
 	left: -50%;
 }
 
-.patch-list svg {
+#side-panel {
+	width: 250px;
+	float:right;
+}
+#patch-list svg {
 	float: left;
+	width: 50%;
+	height: auto;
+}
 
+#side-panel #fabric-list {
+	display: none;
+}
+
+#side-panel #fabric-list .fabric {
+	width: 40px;
+	height: 40px;
+	margin: 5px;
+}
+
+#main-panel {
+	width: calc(100% - 300px);
+	float:left;
+}
+
+#create-board {
+	padding: 30px;
+}
+
+#create-board svg {
+	width: 100%;
+	height: auto;
 }
 
 polygon {
@@ -149,7 +178,9 @@ polygon {
 }
 .red {
 	fill: red;
+	background-color: red;
 }
 .blue {
 	fill: blue;
+	background-color: blue;
 }
