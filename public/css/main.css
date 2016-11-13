@@ -35,7 +35,7 @@ menu{
 	width: 915px;
 
 	clear: both;
-	margin: 10px auto;
+	margin: 15px auto;
 }
 
 menuitem{
@@ -146,15 +146,43 @@ footer span{
 	width: 50%;
 	height: auto;
 }
+#patch-list svg.active {
+	background-color: blue;
+	padding: 3px;
+}
 
-#side-panel #fabric-list {
+#fabric-list {
 	display: none;
 }
 
-#side-panel #fabric-list .fabric {
-	width: 40px;
-	height: 40px;
+#fabric-list .fabric{
+	clear: left;
+}
+
+#fabric-list .fabric:hover{
+	cursor: pointer;
+}
+
+#fabric-list .fabric div {
+	width: 30px;
+	height: 30px;
 	margin: 5px;
+	border: 1px solid black;
+	float: left;
+}
+
+#fabric-list .fabric.current{
+	border: 2px dashed #800000;
+	background-color: #fafad2;
+}
+
+#fabric-list .fabric span{
+	padding: 5px;
+	line-height: 42px;
+}
+#fabric-list .fabric.new div{
+	text-align: center;
+	font-size: 25px;
 }
 
 #main-panel {
@@ -169,18 +197,51 @@ footer span{
 #create-board svg {
 	width: 100%;
 	height: auto;
+	cursor: pointer;
 }
 
 polygon {
 	fill: white;
 	stroke: black;
-	stroke-width
+	stroke-width: 1px;
 }
 .red {
 	fill: red;
 	background-color: red;
 }
+.green {
+	fill: green;
+	background-color: green;
+}
 .blue {
 	fill: blue;
 	background-color: blue;
 }
+.yellow {
+	fill: yellow;
+	background-color: yellow;
+}
+.pink {
+	fill: pink;
+	background-color: pink;
+}
+.brown {
+	fill: brown;
+	background-color: brown;
+}
+.orange {
+	fill: orange;
+	background-color: orange;
+}
+#welcome{
+	font-size: 30;
+	text-align: center;
+}
+#welcome span{
+	font-size: 50;
+}
+
+.first{	 fill: #adff2f; }
+.second{ fill: #ffff66; }
+
+

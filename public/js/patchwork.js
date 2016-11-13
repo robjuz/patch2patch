@@ -20,21 +20,25 @@ $(document).ready(function(){
         for (var i = 0; i < x; i++) {
             for (var j = 0; j < y; j++) {
                 var patchToAdd = patch.clone();
+                patchToAdd.find("polygon").removeAttr("class");
                 patchToAdd.attr('transform','translate('+ (200*i) + ','+ (200*j) +')');
                 patchwork.append(patchToAdd);
             }
         }
 
         $('#patch-list').hide();
+        $('#welcome').hide();
         $('#fabric-list').show();
     });
 
-    $('#fabric-list .fabric').click(function(){
-        activeFabric = $(this).attr('class');
-        console.log(activeFabric);
+    $('#fabric-list .fabric:not(.new)').click(function(){
+		$(".current").removeClass("current");
+		$(this).addClass("current");
+        activeFabric = $(this).find('div').attr('class');
     });
 
     $('#create-board').on('click', 'polygon', function(){
-        $(this).removeClass().addClass(activeFabric);
+        $(this).removeAttr("class");
+		$(this).addClass(activeFabric);
     });
 });
