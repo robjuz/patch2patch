@@ -3,7 +3,6 @@
 // }
 
 $(document).ready(function(){
-
     var activeFabric = null;
 
     $('#patch-list svg').click(function(){
@@ -42,3 +41,24 @@ $(document).ready(function(){
 		$(this).addClass(activeFabric);
     });
 });
+
+function save()
+{
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    })
+    var svg = document.getElementById('patchwork'); // or whatever you call it
+    var serializer = new XMLSerializer();
+    var str = serializer.serializeToString(svg);
+
+    $.post(
+        '/patchwork',
+        { content: str},
+        function( result) {
+            alert(result);
+        }
+    )
+}

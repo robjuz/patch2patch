@@ -246,7 +246,7 @@
     <div id="create-board">
 		<div id="welcome">
 			Tutaj będzie Twój patchwork! <br>
-			Najpierw wybierz z jakich elementów ma się składać <br> 
+			Najpierw wybierz z jakich elementów ma się składać <br>
 			<span>→</span>
 		</div>
         <svg id="patchwork"
@@ -254,6 +254,9 @@
             xmlns="http://www.w3.org/1999/xlink"
             version="1.1">
         </svg>
+
+        <input type="hidden" name="csrf-token" value="{{ csrf_token() }}">
+        <button type="button" onClick="save()"> Zapisz </button>
 	<div>
 </div>
 @endsection()
