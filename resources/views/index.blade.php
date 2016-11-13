@@ -15,28 +15,28 @@
 			<img src="logo.jpg" alt="Patchworkarnia">
 		</a>
 	</div>
-	<div id="menu">
-		<div class="menuitem active">
-			<a href="<% url('/') %>">
+	<menu>
+		<menuitem class="active">
+			<a>
 				Projektowanie
 			</a>
-		</div>
-		<div class="menuitem">
-			<a href="<% action('PatchworkController@index') %>">
+		</menuitem>
+		<menuitem>
+			<a>
 				Galeria
 			</a>
-		</div>
-		<div class="menuitem">
+		</menuitem>
+		<menuitem>
 			<a>
 				Księga gości
 			</a>
-		</div>
-		<div class="menuitem">
+		</menuitem>
+		<menuitem>
 			<a>
 				Twórcy
 			</a>
-		</div>
-	</div>
+		</menuitem>
+	</menu>
 </header>
 
 <main>
