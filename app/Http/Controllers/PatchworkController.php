@@ -14,8 +14,7 @@ class PatchworkController extends Controller
      */
     public function index()
     {
-        $patchworks = Patchwork::get();
-        return view('gallery', compact('patchworks'));
+        return response()->json(Patchwork::get());
     }
 
     /**
@@ -23,10 +22,10 @@ class PatchworkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('create');
-    }
+    // public function create()
+    // {
+    //     return view('create');
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +35,8 @@ class PatchworkController extends Controller
      */
     public function store(Request $request)
     {
-        Patchwork::create($request->all());
+        $patchwork = Patchwork::create($request->all());
+        return response()->json($patchwork->id);
     }
 
     /**
@@ -47,8 +47,7 @@ class PatchworkController extends Controller
      */
     public function show($id)
     {
-        $patchwork = Patchwork::find($id);
-        return response()->json($patchwork);
+        return response()->json(Patchwork::find($id));
     }
 
     /**
@@ -57,10 +56,10 @@ class PatchworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    // public function edit($id)
+    // {
+    //     //
+    // }
 
     /**
      * Update the specified resource in storage.

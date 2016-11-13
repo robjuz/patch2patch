@@ -17,7 +17,7 @@
 	</div>
 	<div id="menu">
 		<div class="menuitem active">
-			<a href="<% action('PatchworkController@create') %>">
+			<a href="<% url('/') %>">
 				Projektowanie
 			</a>
 		</div>
@@ -52,7 +52,9 @@
 	<span>
 		Patchworkarnia 2016
 	</span>
-	<script src="/js/angular.min.js"
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<!-- <script src="/js/angular.min.js"></script> -->
+	<script src="/js/patchwork.js"></script>
 </footer>
 
 </body>

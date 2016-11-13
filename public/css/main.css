@@ -6,7 +6,7 @@ body{
 	background-color: #fffaf0;
 }
 
-a{ 
+a{
 	color: #800000;
 }
 
@@ -20,7 +20,7 @@ a:visited{
 
 header{
 	width: 1000px;
-	
+
 	margin: 0 auto;
 	background-color: #fff;
 }
@@ -41,7 +41,7 @@ menu{
 menuitem{
 	width: 180px;
 	height: 30px;
-	
+
 	font-weight: bold;
 	float: left;
 	line-height: 30px;
@@ -79,7 +79,7 @@ main{
 	height: 270px;
 
 	padding: 20px;
-	text-align: center;	
+	text-align: center;
 	background-color: #fff;
 	margin: 10px;
 	float: left;
@@ -135,4 +135,21 @@ footer span{
 	font-size: 12px;
 	position: relative;
 	left: -50%;
+}
+
+.patch-list svg {
+	float: left;
+
+}
+
+polygon {
+	fill: white;
+	stroke: black;
+	stroke-width
+}
+.red {
+	fill: red;
+}
+.blue {
+	fill: blue;
 }

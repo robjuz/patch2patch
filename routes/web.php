@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', 'PatchworkController@create');
+Route::get('/', function(){
+    return view('create');
+});
 
-Route::get('/galeria', 'PatchworkController@index');
+Route::get('/galeria', function() {
+    return view('gallery');
+});
 
 Route::resource('patchwork', 'PatchworkController', ['except' => [
-    'index', 'create'
+    'create', 'edit'
 ]]);
