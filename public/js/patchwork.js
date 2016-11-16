@@ -35,31 +35,29 @@ $(document).ready(function(){
     $('#fabric-list .fabric:not(.new)').click(function(){
 		$(".current").removeClass("current");
 		$(this).addClass("current");
-        activeFabric = $(this).find('div').css('background-color');
+        activeFabric = $(this).find('pattern').attr('id');
     });
 
     $('#create-board').on('click', 'polygon', function(){
-		$(this).attr('fill', activeFabric);
+		$(this).attr('fill', 'url("#'+activeFabric+'")');
     });
 });
 
-function save()
+$('#save-patchwork-button').click(function(e)
 {
-
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    })
-    var svg = document.getElementById('patchwork'); // or whatever you call it
+    e.preventDefault();
+    var svg = document.getElementById('patchwork');
     var serializer = new XMLSerializer();
     var str = serializer.serializeToString(svg);
+    $('#patchwork-content').val(str);
+
+
 
     $.post(
         '/patchwork',
-        { content: str},
+        $('#save-patchwork-form').serialize(),
         function( result) {
             alert(result);
         }
     )
-}
+});

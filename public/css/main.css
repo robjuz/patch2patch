@@ -241,3 +241,8 @@ polygon {
 
 .first{	 fill: #adff2f; }
 .second{ fill: #ffff66; }
+
+.form-group input,
+.form-group textarea{
+	width: 100%;
+}

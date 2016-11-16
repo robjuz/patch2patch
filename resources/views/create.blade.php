@@ -208,11 +208,17 @@
 		<h2>Materiały:</h2>
         @foreach( $fabrics as $fabric)
             <div class="fabric">
-    			<div style="background-color: <% $fabric->color %>;"></div>
+                <svg height="0">
+                    <defs>
+                        <pattern id="fabric-<% $fabric->id %>" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                            <image xlink:href="/img/freetrial.png" x="0" y="0" width="100" height="100" />
+                        </pattern>
+                    </defs>
+                </svg>
+    			<div style="background: <% $fabric->color %> url(<% $fabric->image %>); background-size: contain;"></div>
     			<span><% $fabric->title %></span>
     		</div>
         @endforeach
-
 		<hr>
 		<div class="fabric new">
 			<div>?</div>
@@ -228,14 +234,26 @@
 			Najpierw wybierz z jakich elementów ma się składać <br>
 			<span>→</span>
 		</div>
-        <svg id="patchwork"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1">
-        </svg>
+        <div id="patchwork-wrapper">
+            <svg id="patchwork"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/1999/xlink"
+                version="1.1">
+            </svg>
+        </div>
 
-        <input type="hidden" name="csrf-token" value="{{ csrf_token() }}">
-        <button type="button" onClick="save()"> Zapisz </button>
+        <form id="save-patchwork-form" method="POST" action="/patchwork">
+            <input id="patchwork-content" type="hidden" name="content" value=""/>
+            <div class="form-group">
+                <label for="title">Nazwa</label>
+                <input type="text" name="title"/>
+            </div>
+            <div class="form-group">
+                <label for="description">Opis</label>
+                <textarea name="description"></textarea>
+            </div>
+            <button id="save-patchwork-button" type="submit"> Zapisz </button>
+        <form>
 	<div>
 </div>
 @endsection()
