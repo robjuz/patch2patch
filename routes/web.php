@@ -1,5 +1,8 @@
 <?php
 
+use App\Patchwork;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +18,9 @@ Route::get('/', function(){
     return view('create');
 });
 
-Route::get('/galeria', function() {
-    return view('gallery');
-});
+Route::get('/galeria', 'GalleryController@index');
+
+Route::get('/galeria/{patchwork}', 'GalleryController@show')->name('single-patchwork');
 
 Route::resource('patchwork', 'PatchworkController', ['except' => [
     'create', 'edit'

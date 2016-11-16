@@ -22,7 +22,7 @@
 			</a>
 		</menuitem>
 		<menuitem>
-			<a>
+			<a href="/galeria">
 				Galeria
 			</a>
 		</menuitem>
