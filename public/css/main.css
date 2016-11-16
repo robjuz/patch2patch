@@ -199,7 +199,7 @@ footer span{
 }
 
 polygon {
-	fill: white;
+	/*fill: white;*/
 	stroke: black;
 	stroke-width: 1px;
 }
@@ -241,5 +241,3 @@ polygon {
 
 .first{	 fill: #adff2f; }
 .second{ fill: #ffff66; }
-
-

@@ -15,6 +15,7 @@ class CreateFabricTable extends Migration
     {
         Schema::create('fabric', function(Blueprint $table){
             $table->increments('id');
+            $table->string('title', 45)->nullable();
             $table->text('image')->nullable();
             $table->string('color', 255)->nullable();
         });

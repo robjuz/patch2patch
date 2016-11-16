@@ -15,8 +15,9 @@ class CreatePatchworkTable extends Migration
     {
         Schema::create('patchwork', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('thumbnail')->nullable();
+            $table->text('title')->nullable();
             $table->text('description')->nullable();
+            $table->text('content');
             $table->integer('views')->nullable()->default(0);
             $table->integer('likes')->nullable()->default(0);
             $table->string('created_by', 255);

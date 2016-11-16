@@ -206,34 +206,13 @@
     </div>
     <div id="fabric-list">
 		<h2>Materiały:</h2>
-        <div class="fabric">
-			<div class="red"></div>
-			<span>czerwony</span>
-		</div>
-        <div class="fabric">
-			<div class="green"></div>
-			<span>zielony</span>
-		</div>
-        <div class="fabric">
-			<div class="blue"></div>
-			<span>niebieski</span>
-		</div>
-        <div class="fabric">
-			<div class="yellow"></div>
-			<span>żółty</span>
-		</div>
-        <div class="fabric">
-			<div class="pink"></div>
-			<span>różowy</span>
-		</div>
-        <div class="fabric">
-			<div class="brown"></div>
-			<span>brązowy</span>
-		</div>
-        <div class="fabric">
-			<div class="orange"></div>
-			<span>pomarańczowy</span>
-		</div>
+        @foreach( $fabrics as $fabric)
+            <div class="fabric">
+    			<div style="background-color: <% $fabric->color %>;"></div>
+    			<span><% $fabric->title %></span>
+    		</div>
+        @endforeach
+
 		<hr>
 		<div class="fabric new">
 			<div>?</div>

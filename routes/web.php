@@ -1,6 +1,7 @@
 <?php
 
 use App\Patchwork;
+use App\Fabric;
 
 
 /*
@@ -15,10 +16,10 @@ use App\Patchwork;
 */
 
 Route::get('/', function(){
-    return view('create');
+    return view('create')->with('fabrics', Fabric::get());
 });
 
-Route::get('/galeria', 'GalleryController@index');
+Route::get('/galeria', 'GalleryController@index')->name('gallery');
 
 Route::get('/galeria/{patchwork}', 'GalleryController@show')->name('single-patchwork');
 

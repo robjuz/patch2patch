@@ -22,6 +22,7 @@ $(document).ready(function(){
                 var patchToAdd = patch.clone();
                 patchToAdd.find("polygon").removeAttr("class");
                 patchToAdd.attr('transform','translate('+ (200*i) + ','+ (200*j) +')');
+                patchToAdd.find('polygon').attr('fill', 'white');
                 patchwork.append(patchToAdd);
             }
         }
@@ -34,12 +35,11 @@ $(document).ready(function(){
     $('#fabric-list .fabric:not(.new)').click(function(){
 		$(".current").removeClass("current");
 		$(this).addClass("current");
-        activeFabric = $(this).find('div').attr('class');
+        activeFabric = $(this).find('div').css('background-color');
     });
 
     $('#create-board').on('click', 'polygon', function(){
-        $(this).removeAttr("class");
-		$(this).addClass(activeFabric);
+		$(this).attr('fill', activeFabric);
     });
 });
 
