@@ -35,11 +35,18 @@ $(document).ready(function(){
     $('#fabric-list .fabric:not(.new)').click(function(){
 		$(".current").removeClass("current");
 		$(this).addClass("current");
-        activeFabric = $(this).find('pattern').attr('id');
+        var pattern = $(this).find('pattern');
+        var fabricThumbnail = pattern.closest('.fabric').find('.fabric-thumbnail');
+        if (fabricThumbnail.css('background-image') !== "none"){
+            activeFabric = 'url("#'+ pattern.attr('id')+'")';
+
+        } else {
+            activeFabric = fabricThumbnail.css('background-color');
+        }
     });
 
     $('#create-board').on('click', 'polygon', function(){
-		$(this).attr('fill', 'url("#'+activeFabric+'")');
+		$(this).attr('fill', activeFabric);
     });
 });
 

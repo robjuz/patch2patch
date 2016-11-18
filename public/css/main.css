@@ -203,7 +203,7 @@ polygon {
 	stroke: black;
 	stroke-width: 1px;
 }
-.red {
+/*.red {
 	fill: red;
 	background-color: red;
 }
@@ -230,7 +230,7 @@ polygon {
 .orange {
 	fill: orange;
 	background-color: orange;
-}
+}*/
 #welcome{
 	font-size: 30;
 	text-align: center;

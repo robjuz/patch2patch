@@ -3,206 +3,8 @@
 @section('content')
 <div id="side-panel">
     <div id="patch-list">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group" transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-        </g>
-        </svg>
-
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group"  transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 0,100 100,0" class="second"/>
-                <polygon points="0,100 100,100 100,0" class="first"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 0,100 100,0" class="second"/>
-                <polygon points="0,100 100,100 100,0" class="first"/>
-            </g>
-        </g>
-        </svg>
-
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group"  transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 0,100 100,0" class="second"/>
-                <polygon points="0,100 100,100 100,0" class="first"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 100,100 100,0" class="second"/>
-                <polygon points="0,0 100,100 0,100" class="first"/>
-            </g>
-        </g>
-        </svg>
-
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group" transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 100,100 100,0" class="second"/>
-                <polygon points="0,0 100,100 0,100" class="first"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 0,100 100,0" class="second"/>
-                <polygon points="0,100 100,100 100,0" class="first"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-        </g>
-        </svg>
-
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group"  transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 100,100 100,0" class="second"/>
-                <polygon points="0,0 100,100 0,100" class="first"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 0,100 100,0" class="second"/>
-                <polygon points="0,100 100,100 100,0" class="first"/>
-            </g>
-        </g>
-        </svg>
-
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group"  transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-        </g>
-        </svg>
-
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group"  transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 0,100 100,0" class="first"/>
-                <polygon points="0,100 100,100 100,0" class="second"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 0,100 100,0" class="second"/>
-                <polygon points="0,100 100,100 100,0" class="first"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 100,100 100,0" class="second"/>
-                <polygon points="0,0 100,100 0,100" class="first"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-        </g>
-        </svg>
-
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="0 0 220 220">
-        <g class="main-group"  transform="translate(10,10)">
-            <g>
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="first"/>
-            </g>
-            <g transform="translate(100,0)">
-                <polygon points="0,0 100,100 100,0" class="second"/>
-                <polygon points="0,0 100,100 0,100" class="first"/>
-            </g>
-            <g transform="translate(0,100)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="second"/>
-            </g>
-            <g transform="translate(100,100)">
-                <polygon points="0,0 100,100 100,0" class="first"/>
-                <polygon points="0,0 100,100 0,100" class="first"/>
-            </g>
-        </g>
-        </svg>
-
+        @include('patches.trianges')
+        @include('patches.rectangles')
     </div>
     <div id="fabric-list">
 		<h2>Materiały:</h2>
@@ -210,12 +12,15 @@
             <div class="fabric">
                 <svg height="0">
                     <defs>
-                        <pattern id="fabric-<% $fabric->id %>" width="100%" height="100%" patternUnits="userSpaceOnUse">
-                            <image xlink:href="/img/freetrial.png" x="0" y="0" width="100" height="100" />
-                        </pattern>
-                    </defs>
+                      <pattern id="fabric-<% $fabric->id %>" x="0" y="0" width="1" height="1">
+                        <image width="100" height="100"
+                               xlink:href="<% $fabric->image %>"/>
+                      </pattern>
+                  </defs>
                 </svg>
-    			<div style="background: <% $fabric->color %> url(<% $fabric->image %>); background-size: contain;"></div>
+    			<div class="fabric-thumbnail"style="
+                    background-color: <% $fabric->color %>;
+                    <?= is_file(public_path().$fabric->image) ? 'background-image: url(' . $fabric->image . '); background-size: contain;' : '' ?>"></div>
     			<span><% $fabric->title %></span>
     		</div>
         @endforeach
