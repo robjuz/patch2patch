@@ -166,7 +166,7 @@ footer span{
 	cursor: pointer;
 }
 
-#fabric-list .fabric div {
+#fabric-list .fabric-thumbnail {
 	width: 30px;
 	height: 30px;
 	margin: 5px;
@@ -174,13 +174,22 @@ footer span{
 	float: left;
 }
 
-#fabric-list .fabric span{
+#fabric-list .fabric-color{
 	padding: 5px;
 	line-height: 42px;
 }
-#fabric-list .fabric.new div{
+#add-fabric div {
 	text-align: center;
 	font-size: 25px;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	border: 1px solid black;
+	float: left;
+}
+#add-fabric span {
+	padding: 5px;
+	line-height: 42px;
 }
 
 #main-panel {
@@ -242,7 +251,20 @@ polygon {
 .first{	 fill: #adff2f; }
 .second{ fill: #ffff66; }
 
+.form-group {
+	width: 100%;
+}
+
 .form-group input,
 .form-group textarea{
 	width: 100%;
+}
+
+#save-fabric-form {
+	clear: both;
+	display: none;
+}
+
+#upload-form {
+	display: none;
 }

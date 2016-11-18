@@ -21,13 +21,30 @@
     			<div class="fabric-thumbnail"style="
                     background-color: <% $fabric->color %>;
                     <?= is_file(public_path().$fabric->image) ? 'background-image: url(' . $fabric->image . '); background-size: contain;' : '' ?>"></div>
-    			<span><% $fabric->title %></span>
+    			<span class="fabric-color"><% $fabric->title %></span>
     		</div>
         @endforeach
 		<hr>
 		<div class="fabric new">
-			<div>?</div>
-			<span>Dodaj nowy materiał!</span>
+            <div id="add-fabric">
+    			<div>?</div>
+    			<span>Dodaj nowy materiał!</span>
+            </div>
+            <form enctype="multipart/form-data" id="save-fabric-form" action="/api/fabric" type="POST">
+                <div class="form-group">
+                    <label for="title">Nazwa</label>
+                    <input type="text" name="title"/>
+                </div>
+                <div class="form-group">
+                    <label for="image">Obrazek</label>
+                    <input type="file" name="image"/>
+                </div>
+                <div class="form-group">
+                    <label for="title">Kolor</label>
+                    <input type="color" name="color"/>
+                </div>
+                <button type="submit"> Dodaj </button>
+            </form>
 		</div>
     </div>
 </div>
@@ -57,7 +74,7 @@
                 <label for="description">Opis</label>
                 <textarea name="description"></textarea>
             </div>
-            <button id="save-patchwork-button" type="submit"> Zapisz </button>
+            <button type="submit"> Zapisz </button>
         <form>
 	<div>
 </div>

@@ -22,7 +22,3 @@ Route::get('/', function(){
 Route::get('/galeria', 'GalleryController@index')->name('gallery');
 
 Route::get('/galeria/{patchwork}', 'GalleryController@show')->name('single-patchwork');
-
-Route::resource('patchwork', 'PatchworkController', ['except' => [
-    'create', 'edit'
-]]);
