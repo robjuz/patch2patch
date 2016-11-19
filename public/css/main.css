@@ -3,7 +3,6 @@ html{
 }
 
 body{
-	background-color: #fffaf0;
 }
 
 a{
@@ -19,38 +18,36 @@ a:visited{
 }
 
 header{
-	width: 1000px;
+	width: 225px;
 
-	margin: 0 auto;
+	float: left;
 	background-color: #fff;
 }
 
 #logo{
-	width: 500px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	background-color: #fafad2;
+	margin: 25px auto;
 }
 
 menu{
-	width: 915px;
-
-	clear: both;
-	margin: 15px auto;
+	padding: 15px;
 }
 
 menuitem{
 	width: 180px;
 	height: 30px;
 
-	font-weight: bold;
 	float: left;
+	font-weight: bold;
 	line-height: 30px;
 	text-align: center;
 	padding: 5px;
 	background-color: #fffacd;
 	border: 3px dashed #800000;
 	text-transform: uppercase;
-	margin: 0 15px;
+	margin: 5px 0;
 }
 
 menuitem:hover{
@@ -64,9 +61,9 @@ menuitem.active{
 }
 
 main{
-	width: 1000px;
+	width: calc(100% - 255px);
 
-	clear: both;
+	float: left;
 	margin: 15px auto;
 }
 

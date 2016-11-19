@@ -12,7 +12,7 @@
 <header>
 	<div id="logo">
 		<a>
-			<img src="logo.jpg" alt="Patchworkarnia">
+			<img src="/img/logo.png" alt="Patchworkarnia">
 		</a>
 	</div>
 	<menu>

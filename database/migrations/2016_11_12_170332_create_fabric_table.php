@@ -18,7 +18,7 @@ class CreateFabricTable extends Migration
             $table->string('title', 45)->nullable();
             $table->text('image')->nullable();
             $table->string('color', 255)->nullable();
-            $table->timestamp();
+//            $table->timestamp();
         });
     }
 

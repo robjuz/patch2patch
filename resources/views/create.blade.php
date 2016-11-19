@@ -64,7 +64,7 @@
             </svg>
         </div>
 
-        <form id="save-patchwork-form" method="POST" action="/patchwork">
+        <form id="save-patchwork-form" method="POST" action="/api/patchwork">
             <input id="patchwork-content" type="hidden" name="content" value=""/>
             <div class="form-group">
                 <label for="title">Nazwa</label>
