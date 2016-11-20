@@ -30,6 +30,7 @@ $('#patch-list svg').click(function(){
     $('#patch-list').hide();
     $('#welcome').hide();
     $('#fabric-list').show();
+    $('#save-patchwork').show();
 });
 
 $(document).on('click', '#fabric-list .fabric:not(.new)', function(){
@@ -67,6 +68,13 @@ $('#add-fabric').click(function() {
 	});
 });
 
+$('#save-patchwork').click(function() {
+    $('#save-patchwork-form').dialog({
+		title: "Zapisz patchwork"
+	});
+});
+
+
 $('#save-fabric-form').submit(function(e){
     e.preventDefault();
     $.ajax({
@@ -86,7 +94,6 @@ $('#save-fabric-form').submit(function(e){
 
 $('#save-patchwork-form').submit(function(e)
 {
-    // e.preventDefault();
     var svg = document.getElementById('patchwork');
     var serializer = new XMLSerializer();
     var str = serializer.serializeToString(svg);
