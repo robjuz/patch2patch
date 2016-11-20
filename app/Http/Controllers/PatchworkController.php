@@ -41,8 +41,10 @@ class PatchworkController extends Controller
     {
         $patchwork = Patchwork::create($request->all());
         $fabrics = $request->input('fabrics');
-        $fabrics = explode(',', $fabrics);
-        $patchwork->fabrics()->sync($fabrics);
+        if (!empty($fabrics)){
+            $fabrics = explode(',', $fabrics);
+            $patchwork->fabrics()->sync($fabrics);
+        }
         return redirect()->route(
             'patchwork.edit', ['patchwork' => $patchwork]
         );
@@ -81,8 +83,13 @@ class PatchworkController extends Controller
     public function update(Request $request, Patchwork $patchwork)
     {
         $patchwork->fill($request->all());
+        $fabrics = $request->input('fabrics');
+        if (!empty($fabrics)){
+            $fabrics = explode(',', $fabrics);
+            $patchwork->fabrics()->sync($fabrics);
+        }
         $patchwork->save();
-        return view('create', compact('patchwork'));
+        return redirect()->route('patchwork.edit', $patchwork);
     }
 
     /**

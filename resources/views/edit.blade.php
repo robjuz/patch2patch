@@ -51,7 +51,7 @@
             <?= $patchwork->content ?>
         </div>
 
-        <form id="save-patchwork-form" method="PUT" action="<% route('patchwork.store') %>">
+        <form id="save-patchwork-form" method="POST" action="<% route('patchwork.update', $patchwork) %>">
             <% method_field('PUT') %>
             <input id="patchwork-content" type="hidden" name="content" value=""/>
             <input id="patchwork-fabrics" type="hidden" name="fabrics" />
