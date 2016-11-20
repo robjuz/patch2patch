@@ -1,7 +1,3 @@
-// function(){
-//     var app = angular.module('patchwork', []);
-// }
-
 
 var activeFabric = null;
 
@@ -64,9 +60,13 @@ $('#create-board').on('click', 'polygon', function(){
 });
 
 $('#add-fabric').click(function() {
-    $('#save-fabric-form').dialog({
-		title: "Dodaj nowy materiał"
-	});
+	var dialog = $('#save-fabric-form').closest('.ui-dialog');
+	
+	if( dialog.length > 0 )
+	   $('#save-fabric-form').dialog('open');
+	else    
+		$('#save-fabric-form').dialog({title: "Dodaj nowy materiał"});
+
 });
 
 $('#save-patchwork').click(function() {
@@ -86,7 +86,7 @@ $('#save-fabric-form').submit(function(e){
           data: new FormData(this),
           success: function(result) {
               $(result).insertBefore('#fabric-list hr');
-              $('.ui-dialog').hide();
+              $('#save-fabric-form').dialog('close');
               $('#add-fabric').show();
           }
       });

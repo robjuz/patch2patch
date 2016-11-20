@@ -58,6 +58,8 @@ class PatchworkController extends Controller
      */
     public function show(Patchwork $patchwork)
     {
+		$patchwork->views++;
+		$patchwork->save();
         return view('patchwork',compact('patchwork'));
     }
 
