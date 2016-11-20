@@ -243,7 +243,7 @@ polygon {
 	display: none;
 }
 
-#save-fabric-form button{
+button.save{
 	background-color: #ffd;
 	border: 2px dashed #800;
 	float: right;
@@ -251,7 +251,7 @@ polygon {
 	padding: 5px;
 }
 
-#save-patchwork-form{
+#save-patchwork, #save-patchwork-form{
 	display: none;
 }
 

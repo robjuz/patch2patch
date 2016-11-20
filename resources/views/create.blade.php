@@ -43,7 +43,7 @@
                     <label for="title">Kolor</label>
                     <input type="color" name="color"/>
                 </div>
-                <button type="submit"> Dodaj </button>
+                <button type="submit" class="save"> Dodaj </button>
             </form>
 		</div>
     </div>
@@ -64,6 +64,7 @@
             </svg>
         </div>
 
+		<button id="save-patchwork" class="save">Zapisz</button>
         <form id="save-patchwork-form" method="POST" action="<% route('patchwork.store') %>">
             <input id="patchwork-content" type="hidden" name="content" value=""/>
             <input id="patchwork-fabrics" type="hidden" name="fabrics" />
@@ -75,7 +76,7 @@
                 <label for="description">Opis</label>
                 <textarea name="description"></textarea>
             </div>
-            <button type="submit"> Zapisz </button>
+            <button type="submit" class="save"> Zapisz </button>
         <form>
 	<div>
 </div>

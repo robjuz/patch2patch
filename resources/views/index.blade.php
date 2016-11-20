@@ -48,7 +48,7 @@
 
 <footer>
 	<span>
-		Patchworkarnia 2016
+		patch2patch 2016
 	</span>
 	<script src="/js/jquery.js"></script>
 	<script src="/js/jquery.svgdom.min.js"></script>
