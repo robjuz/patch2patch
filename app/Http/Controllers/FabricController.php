@@ -47,7 +47,7 @@ class FabricController extends Controller
      */
     public function show($id)
     {
-        return response()->json(Patchwork::find($id));
+        //
     }
 
     /**
@@ -70,9 +70,7 @@ class FabricController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $patchwork = Patchwork::find($id);
-        $patchwork->fill($request->all());
-        $patchwork->save();
+        //
     }
 
     /**
@@ -83,6 +81,6 @@ class FabricController extends Controller
      */
     public function destroy($id)
     {
-        Patchwork::find($id)->delete();
+        //
     }
 }

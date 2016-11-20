@@ -2,17 +2,17 @@
 
 @section('content')
 <div id="details">
-	<div class="title"> 
-		<% $patchwork->title or 'Patchwork '.$patchwork->id %> 
+	<div class="title">
+		<% $patchwork->title or 'Patchwork '.$patchwork->id %>
 	</div>
 	<div class="date">
 		dodano: <span><% $patchwork->created_at->format('d.m.Y') %></span>
-	</div>	
+	</div>
 	<div class="preview">
 		<?= $patchwork->content ?>
 	</div>
 
-	<div id="fabric-list">
+	<div id="fabric-list" class="edit">
 		<h2>Materiały:</h2>
         @foreach( $patchwork->fabrics as $fabric)
             <div class="fabric">
@@ -34,7 +34,7 @@
 
 	<div>
 	</div>
-	
+
 	<svg height="0">
 		@foreach( $patchwork->fabrics as $fabric)
 			<defs>
