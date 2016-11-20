@@ -46,6 +46,7 @@ $(document).on('click', '#fabric-list .fabric:not(.new)', function(){
     } else {
         activeFabric = {
             color : fabricThumbnail.css('background-color'),
+            id : pattern.data('id')
         };
     }
 });
