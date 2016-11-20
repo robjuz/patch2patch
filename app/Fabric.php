@@ -13,4 +13,9 @@ class Fabric extends Model
     {
         return $this->hasMany('App\Patch');
     }
+
+    public function patchworks()
+    {
+        return $this->belongsToMany('App\Patchwork', 'patchwork_fabric');
+    }
 }

@@ -17,10 +17,6 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // })->middleware('auth:api');
 
-Route::resource('patchwork', 'PatchworkController', ['except' => [
-    'create', 'edit'
-]]);
-
 Route::resource('fabric', 'FabricController', ['except' => [
     'create', 'edit'
 ]]);

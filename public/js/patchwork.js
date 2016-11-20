@@ -38,15 +38,27 @@ $(document).on('click', '#fabric-list .fabric:not(.new)', function(){
     var pattern = $(this).find('pattern');
     var fabricThumbnail = pattern.closest('.fabric').find('.fabric-thumbnail');
     if (fabricThumbnail.css('background-image') !== "none"){
-        activeFabric = 'url("#'+ pattern.attr('id')+'")';
+        activeFabric = {
+            color : 'url("#'+ pattern.attr('id')+'")',
+            id : pattern.data('id')
+        };
 
     } else {
-        activeFabric = fabricThumbnail.css('background-color');
+        activeFabric = {
+            color : fabricThumbnail.css('background-color'),
+        };
     }
 });
 
 $('#create-board').on('click', 'polygon', function(){
-	$(this).attr('fill', activeFabric);
+    var patchworkFabrics = $('#patchwork-fabrics').val();
+    patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
+
+    if (!(activeFabric.id in patchworkFabrics)){
+        patchworkFabrics.push(activeFabric.id);
+        $('#patchwork-fabrics').val(patchworkFabrics);
+    }
+	$(this).attr('fill', activeFabric.color);
 });
 
 $('#add-fabric').click(function() {
@@ -74,17 +86,9 @@ $('#save-fabric-form').submit(function(e){
 
 $('#save-patchwork-form').submit(function(e)
 {
-    e.preventDefault();
+    // e.preventDefault();
     var svg = document.getElementById('patchwork');
     var serializer = new XMLSerializer();
     var str = serializer.serializeToString(svg);
     $('#patchwork-content').val(str);
-
-    $.post(
-        $(this).attr('action'),
-        $(this).serialize(),
-        function(result) {
-            alert(result);
-        }
-    )
 });

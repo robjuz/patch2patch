@@ -9,9 +9,9 @@ class Patchwork extends Model
     protected $table = 'patchwork';
     protected $fillable = ['content','title','description'];
 
-    public function patches()
+    public function fabrics()
     {
-        return $this->hasMany('App\Patch');
+        return $this->belongsToMany('App\Fabric', 'patchwork_fabric');
     }
 
     public function comments()

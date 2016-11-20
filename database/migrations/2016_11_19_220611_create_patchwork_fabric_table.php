@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFabricTable extends Migration
+class CreatePatchworkFabricTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateFabricTable extends Migration
      */
     public function up()
     {
-        Schema::create('fabric', function(Blueprint $table){
-            $table->increments('id');
-            $table->string('title', 45)->nullable();
-            $table->text('image')->nullable();
-            $table->string('color', 255)->nullable();
-            $table->timestamps();
+        Schema::create('patchwork_fabric', function(Blueprint $table){
+            $table->unsignedInteger('patchwork_id')->nullable();
+            $table->unsignedInteger('fabric_id')->nullable();
+            $table->primary(['patchwork_id', 'fabric_id']);
+
         });
     }
 
@@ -29,6 +28,6 @@ class CreateFabricTable extends Migration
      */
     public function down()
     {
-        Schema::drop('fabric');
+        Schema::drop('patchwork_fabric');
     }
 }

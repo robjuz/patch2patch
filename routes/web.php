@@ -15,10 +15,8 @@ use App\Fabric;
 |
 */
 
-Route::get('/', function(){
-    return view('create')->with('fabrics', Fabric::get());
-});
+Route::get('/', 'PatchworkController@create');
 
-Route::get('/galeria', 'GalleryController@index')->name('gallery');
-
-Route::get('/galeria/{patchwork}', 'GalleryController@show')->name('single-patchwork');
+Route::resource('patchwork', 'PatchworkController', ['except' => [
+    'create'
+]]);
