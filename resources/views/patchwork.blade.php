@@ -14,7 +14,7 @@
 
 	<div id="fabric-list">
 		<h2>Materiały:</h2>
-        @foreach( $fabrics as $fabric)
+        @foreach( $patchwork->fabrics as $fabric)
             <div class="fabric">
                 <svg height="0">
                     <defs>

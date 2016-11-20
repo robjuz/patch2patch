@@ -86,7 +86,7 @@ $('#save-fabric-form').submit(function(e){
           data: new FormData(this),
           success: function(result) {
               $(result).insertBefore('#fabric-list hr');
-              $('#save-fabric-form').hide();
+              $('.ui-dialog').hide();
               $('#add-fabric').show();
           }
       });
