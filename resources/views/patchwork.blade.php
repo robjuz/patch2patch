@@ -2,12 +2,13 @@
 
 @section('content')
 <div id="details">
-	<div class="title">
+	<h1 class="title">
 		<% $patchwork->title or 'Patchwork '.$patchwork->id %>
-	</div>
+	</h1>
 	<div class="date">
 		dodano: <span><% $patchwork->created_at->format('d.m.Y') %></span>
 	</div>
+		
 	<div class="preview">
 		<?= $patchwork->content ?>
 	</div>

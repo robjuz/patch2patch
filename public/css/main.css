@@ -4,6 +4,7 @@ html{
 }
 
 body{
+background-color: #f5f5dc;
 	margin: 0;
 }
 
@@ -69,19 +70,19 @@ main{
 	margin: 15px auto;
 }
 
-#gallery{
-	background-color: #eee;
+.single-patchwork-wrapper {
+	width: 25%;
+	float: left;
 }
 
 .single-patchwork{
-	width: 190px;
-	height: 270px;
+	height: 220px;
 
 	padding: 20px;
 	text-align: center;
 	background-color: #fff;
+	border: 1px solid #222;
 	margin: 10px;
-	float: left;
 }
 
 .single-patchwork .title{
@@ -97,11 +98,17 @@ main{
 	margin-top: 5px;
 	color: #111;
 	font-size: 10px;
-	float: right;
+	float: left;
 }
 
-.single-patchwork img{
-	margin: 10px 0;
+.single-patchwork .preview-wrapper{
+	height: 170px;
+	width: 100%;
+}
+
+.single-patchwork .preview-wrapper svg {
+	height: 100%;
+	width: 100%;
 }
 
 .single-patchwork .statistics{
@@ -116,12 +123,6 @@ main{
 .single-patchwork .likes{
 	float: right;
 	font-size: 12px;
-}
-
-.single-patchwork a{
-	clear: both;
-	font-size: 13px;
-	float: right;
 }
 
 footer{
@@ -235,8 +236,20 @@ polygon {
 }
 
 .form-group input,
-.form-group textarea{
+.form-group textarea,
+.form-group button{
 	width: 100%;
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+.inputfile{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 #save-fabric-form {
@@ -273,6 +286,7 @@ button.save{
     opacity: 0.4;
     position: fixed;
     width: 100%;
+    z-index: 200;
 }
 
 #loading-gears{
@@ -285,3 +299,19 @@ button.save{
 	margin-top: -50%;
 	margin-left: -50%;
 }
+
+h1{
+    border-bottom: 2px dashed #660000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#patchwork .date{
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+
+

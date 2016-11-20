@@ -10,7 +10,7 @@ $('#patch-list svg').click(function(){
     y = +prompt('Ile elementów ma być w pionie?');
     var patch = $(this).find('g.main-group');
     var patchwork = $('#patchwork');
-    patchwork.attr('viewBox', '0 0 '+ (x*220) + ' ' + (y*220));
+    patchwork.attr('viewBox', '0 0 '+ (x*200) + ' ' + (y*200));
 
 
     for (var i = 0; i < x; i++) {
@@ -60,6 +60,26 @@ $('#create-board').on('click', 'polygon', function(){
 });
 
 $('#add-fabric').click(function() {
+	var inputs = document.querySelectorAll('.inputfile');
+	Array.prototype.forEach.call(inputs, function(input){
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener('change', function(e){
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split('\\').pop();
+
+			if( fileName )
+				label.querySelector('span').innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+	});
+	
+	
 	var dialog = $('#save-fabric-form').closest('.ui-dialog');
 	
 	if( dialog.length > 0 )
@@ -111,5 +131,10 @@ function showSpinner(){
 function hideSpinner(){
 	$("#loading-gears-wrapper").hide();
 }
+
+
+
+
+
 
 
