@@ -6,6 +6,7 @@
 	</title>
 
 	 <link rel="stylesheet" href="/css/main.css">
+	 <link rel="stylesheet" href="/css/jquery-ui.min.css">
 </head>
 <body>
 
@@ -50,8 +51,9 @@
 		Patchworkarnia 2016
 	</span>
 	<script src="/js/jquery.js"></script>
-	<script type="text/javascript" src="/js/jquery.svgdom.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.svg.min.js"></script>
+	<script src="/js/jquery.svgdom.min.js"></script>
+	<script src="/js/jquery.svg.min.js"></script>
+	<script src="/js/jquery-ui.min.js"></script>
 	<script src="/js/patchwork.js"></script>
 </footer>
 

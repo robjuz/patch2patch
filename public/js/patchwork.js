@@ -50,8 +50,9 @@ $('#create-board').on('click', 'polygon', function(){
 });
 
 $('#add-fabric').click(function() {
-    $('#save-fabric-form').show();
-    $('#add-fabric').hide();
+    $('#save-fabric-form').dialog({
+		title: "Dodaj nowy materiał"
+	});
 });
 
 $('#save-fabric-form').submit(function(e){
