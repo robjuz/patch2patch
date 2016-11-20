@@ -20,7 +20,7 @@ class CreatePatchworkTable extends Migration
             $table->text('content');
             $table->integer('views')->nullable()->default(0);
             $table->integer('likes')->nullable()->default(0);
-            $table->string('created_by', 255);
+            $table->string('created_by', 255)->nullable();
             $table->timestamps();
         });
     }

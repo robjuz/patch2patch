@@ -51,29 +51,21 @@
 
 <div id="main-panel">
     <div id="create-board">
-		<div id="welcome">
-			Tutaj będzie Twój patchwork! <br>
-			Najpierw wybierz z jakich elementów ma się składać <br>
-			<span>→</span>
-		</div>
         <div id="patchwork-wrapper">
-            <svg id="patchwork"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns="http://www.w3.org/1999/xlink"
-                version="1.1">
-            </svg>
+            <% $patchwork->content %>
         </div>
 
-        <form id="save-patchwork-form" method="POST" action="<% route('patchwork.store')">
+        <form id="save-patchwork-form" method="PUT" action="<% route('patchwork.store')">
+            <% { method_field('PUT') %>
             <input id="patchwork-content" type="hidden" name="content" value=""/>
             <input id="patchwork-fabrics" type="hidden" name="fabrics" />
             <div class="form-group">
                 <label for="title">Nazwa</label>
-                <input type="text" name="title"/>
+                <input type="text" name="title" value="<% $patchwork->title %>"/>
             </div>
             <div class="form-group">
                 <label for="description">Opis</label>
-                <textarea name="description"></textarea>
+                <textarea name="description" value="<% $patchwork->description %>"></textarea>
             </div>
             <button type="submit"> Zapisz </button>
         <form>

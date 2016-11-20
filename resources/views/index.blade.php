@@ -22,7 +22,7 @@
 			</a>
 		</menuitem>
 		<menuitem>
-			<a href="<% route('gallery') %>">
+			<a href="<% route('patchwork.index') %>">
 				Galeria
 			</a>
 		</menuitem>

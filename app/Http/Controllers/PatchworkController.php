@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Patchwork;
+use App\Fabric;
 
 class PatchworkController extends Controller
 {
@@ -14,7 +15,10 @@ class PatchworkController extends Controller
      */
     public function index()
     {
-        return response()->json(Patchwork::get());
+        $patchworks = Patchwork::get();
+        $fabrics = Fabric::get();
+        return view('gallery',compact(['patchworks', 'fabrics']));
+
     }
 
     /**
@@ -22,10 +26,10 @@ class PatchworkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create()
-    // {
-    //     return view('create');
-    // }
+    public function create()
+    {
+        return view('create')->with('fabrics', Fabric::get());
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +40,12 @@ class PatchworkController extends Controller
     public function store(Request $request)
     {
         $patchwork = Patchwork::create($request->all());
-        return response()->json($patchwork->id);
+        $fabrics = $request->input('fabrics');
+        $fabrics = explode(',', $fabrics);
+        $patchwork->fabrics()->sync($fabrics);
+        return redirect()->route(
+            'patchwork.edit', ['patchwork' => $patchwork]
+        );
     }
 
     /**
@@ -45,9 +54,9 @@ class PatchworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Patchwork $patchwork)
     {
-        return response()->json(Patchwork::find($id));
+        return view('patchwork',compact('patchwork'));
     }
 
     /**
@@ -56,10 +65,11 @@ class PatchworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function edit($id)
-    // {
-    //     //
-    // }
+    public function edit(Patchwork $patchwork)
+    {
+        $fabrics = Fabric::get();
+        view('edit', compact(['patchwork', 'fabrics']));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -68,11 +78,11 @@ class PatchworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Patchwork $patchwork)
     {
-        $patchwork = Patchwork::find($id);
         $patchwork->fill($request->all());
         $patchwork->save();
+        return view('create', compact('patchwork'));
     }
 
     /**
@@ -81,8 +91,9 @@ class PatchworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Patchwork $patchwork)
     {
-        Patchwork::find($id)->delete();
+        $patchwork->delete();
+        return redirect()->action('PatchworkController@index');
     }
 }
