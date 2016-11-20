@@ -78,6 +78,7 @@ $('#save-patchwork').click(function() {
 
 $('#save-fabric-form').submit(function(e){
     e.preventDefault();
+    showSpinner();
     $.ajax({
           url: $(this).attr('action'),
           type: 'post',
@@ -90,13 +91,25 @@ $('#save-fabric-form').submit(function(e){
               $('#add-fabric').show();
           }
       });
+      hideSpinner();
 });
 
 
 $('#save-patchwork-form').submit(function(e)
 {
+	showSpinner();
     var svg = document.getElementById('patchwork');
     var serializer = new XMLSerializer();
     var str = serializer.serializeToString(svg);
     $('#patchwork-content').val(str);
 });
+
+function showSpinner(){
+	$("#loading-gears-wrapper").show();
+}
+
+function hideSpinner(){
+	$("#loading-gears-wrapper").hide();
+}
+
+

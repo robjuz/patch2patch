@@ -4,6 +4,7 @@ html{
 }
 
 body{
+	margin: 0;
 }
 
 a{
@@ -36,7 +37,7 @@ menu{
 	padding: 15px;
 }
 
-menuitem{
+.menuitem{
 	width: 180px;
 	height: 30px;
 
@@ -51,12 +52,12 @@ menuitem{
 	margin: 5px 0;
 }
 
-menuitem:hover{
+.menuitem:hover{
 	background-color: #ffa500;
 	cursor: pointer;
 }
 
-menuitem.active{
+.menuitem.active{
 	background-color: #ffed4d;
 	border-color: #ff4500;
 }
@@ -263,4 +264,24 @@ button.save{
 	background-color: #fff;
 	border: 1px solid #000;
 	top: 50px;
+}
+
+#loading-gears-wrapper{
+    background-color: #000000;
+    display: none;
+    height: 100%;
+    opacity: 0.4;
+    position: fixed;
+    width: 100%;
+}
+
+#loading-gears{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+}
+
+#loading-gears svg{
+	margin-top: -50%;
+	margin-left: -50%;
 }
