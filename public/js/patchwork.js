@@ -56,7 +56,7 @@ $('#create-board').on('click', 'polygon', function(){
     var patchworkFabrics = $('#patchwork-fabrics').val();
     patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
 
-    if (!(activeFabric.id in patchworkFabrics)){
+    if ( $.inArray(activeFabric.id, patchworkFabrics) === -1){
         patchworkFabrics.push(activeFabric.id);
         $('#patchwork-fabrics').val(patchworkFabrics);
     }
