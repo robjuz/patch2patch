@@ -2,11 +2,7 @@
 
 @section('content')
 <div id="side-panel">
-    <div id="patch-list">
-        @include('patches.trianges')
-        @include('patches.rectangles')
-    </div>
-    <div id="fabric-list">
+    <div id="fabric-list" class="edit">
 		<h2>Materiały:</h2>
         @foreach( $fabrics as $fabric)
             <div class="fabric">
@@ -52,11 +48,11 @@
 <div id="main-panel">
     <div id="create-board">
         <div id="patchwork-wrapper">
-            <% $patchwork->content %>
+            <?= $patchwork->content ?>
         </div>
 
-        <form id="save-patchwork-form" method="PUT" action="<% route('patchwork.store')">
-            <% { method_field('PUT') %>
+        <form id="save-patchwork-form" method="PUT" action="<% route('patchwork.store') %>">
+            <% method_field('PUT') %>
             <input id="patchwork-content" type="hidden" name="content" value=""/>
             <input id="patchwork-fabrics" type="hidden" name="fabrics" />
             <div class="form-group">
@@ -68,7 +64,17 @@
                 <textarea name="description" value="<% $patchwork->description %>"></textarea>
             </div>
             <button type="submit"> Zapisz </button>
-        <form>
+        </form>
+        <svg height="0">
+			@foreach( $patchwork->fabrics as $fabric)
+	            <defs>
+	              <pattern id="fabric-<% $fabric->id %>" x="0" y="0" width="1" height="1">
+	                <image width="100" height="100"
+	                       xlink:href="<% $fabric->image %>"/>
+	              </pattern>
+	          </defs>
+	        @endforeach
+        </svg>
 	<div>
 </div>
 @endsection()

@@ -64,7 +64,7 @@
             </svg>
         </div>
 
-        <form id="save-patchwork-form" method="POST" action="<% route('patchwork.store')">
+        <form id="save-patchwork-form" method="POST" action="<% route('patchwork.store') %>">
             <input id="patchwork-content" type="hidden" name="content" value=""/>
             <input id="patchwork-fabrics" type="hidden" name="fabrics" />
             <div class="form-group">

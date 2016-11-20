@@ -155,6 +155,9 @@ footer span{
 #fabric-list {
 	display: none;
 }
+#fabric-list.edit {
+	display: block;
+}
 
 #fabric-list .fabric{
 	clear: left;
