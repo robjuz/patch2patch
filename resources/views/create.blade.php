@@ -3,7 +3,8 @@
 @section('content')
 <div id="side-panel">
     <div id="patch-list">
-        @include('patches.trianges')
+		@include('patches.basics')
+        @include('patches.triangles')
         @include('patches.rectangles')
     </div>
     <div id="fabric-list">

@@ -24,7 +24,6 @@ header{
 	width: 225px;
 
 	float: left;
-	background-color: #fff;
 }
 
 #logo{
@@ -139,7 +138,9 @@ footer span{
 
 #side-panel {
 	width: 250px;
-	float:right;
+	float: right;
+	height: 100vh;
+	overflow-y: scroll;
 }
 #patch-list svg {
 	float: left;
@@ -280,10 +281,9 @@ button.save{
 }
 
 #loading-gears-wrapper{
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.4);
     display: none;
     height: 100%;
-    opacity: 0.4;
     position: fixed;
     width: 100%;
     z-index: 200;
