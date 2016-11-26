@@ -10,14 +10,23 @@ $('#patch-list svg').click(function(){
     y = +prompt('Ile elementów ma być w pionie?');
     var patch = $(this).find('g.main-group');
     var patchwork = $('#patchwork');
-    patchwork.attr('viewBox', '0 0 '+ (x*200) + ' ' + (y*200));
+    var patchSize = 200;
 
+    if ($(this).closest('#patch-list-basics').length > 0)
+		patchSize = 100;
+		
+	if (typeof(x) == undefined || x<1) 
+		x = 4;
+	if (typeof(y) == undefined || y<1)
+		y = 4;		
+    
+    patchwork.attr('viewBox', '0 0 '+ (x*patchSize) + ' ' + (y*patchSize));	
 
     for (var i = 0; i < x; i++) {
         for (var j = 0; j < y; j++) {
             var patchToAdd = patch.clone();
             patchToAdd.find("polygon").removeAttr("class");
-            patchToAdd.attr('transform','translate('+ (200*i) + ','+ (200*j) +')');
+            patchToAdd.attr('transform','translate('+ (patchSize*i) + ','+ (patchSize*j) +')');
             patchToAdd.find('polygon').attr('fill', 'white');
             patchwork.append(patchToAdd);
         }
