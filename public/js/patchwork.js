@@ -10,6 +10,7 @@ var currentPatch;
 //     currentPatch = undefined;
 // });
 $('#patch-list svg').click(function(e) {
+    activeFabric = undefined;
     $('#create-board, #save-patchwork').show();
     $(".current").removeClass("current");
      e.stopPropagation();
@@ -94,8 +95,7 @@ $('#add-row-top').click(function(){
 /**
 * Positioning fabrics
 */
-var activeFabric = null;
-
+var activeFabric;
 $(document).on('click', '#fabric-list .fabric:not(.new)', function(e){
     currentPatch = undefined;
 	$(".current").removeClass("current");
@@ -117,14 +117,16 @@ $(document).on('click', '#fabric-list .fabric:not(.new)', function(e){
 });
 
 $('#patchwork').on('click', 'polygon', function(){
-    var patchworkFabrics = $('#patchwork-fabrics').val();
-    patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
-    if ( $.inArray(activeFabric.id, patchworkFabrics) === -1){
-        patchworkFabrics.push(activeFabric.id);
-        $('#patchwork-fabrics').val(patchworkFabrics);
-    }
+    if (activeFabric !== undefined){
+        var patchworkFabrics = $('#patchwork-fabrics').val();
+        patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
+        if ( $.inArray(activeFabric.id, patchworkFabrics) === -1){
+            patchworkFabrics.push(activeFabric.id);
+            $('#patchwork-fabrics').val(patchworkFabrics);
+        }
 
-	$(this).attr('fill', activeFabric.color);
+        $(this).attr('fill', activeFabric.color);
+    }
 });
 
 $('#add-fabric').click(function() {
