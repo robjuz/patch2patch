@@ -1,6 +1,32 @@
 
+
 var activeFabric = null;
 
+var currentPatch;
+$(document).click(function() {
+    $('#patch-list svg.current').removeClass('current');
+    currentPatch = undefined;
+});
+$('#patch-list svg').click(function(e) {
+     e.stopPropagation();
+    $('#welcome').hide();
+    $('#patchwork').show();
+
+    currentPatch = $('#patch-list svg.current');
+    currentPatch.removeClass('current');
+    $(this).addClass("current");
+    currentPatch = $(this).find('.main-group');
+});
+// $('#patchwork').sortable();
+$('#patchwork g').click(function(e){
+     e.stopPropagation();
+    if (currentPatch !== undefined) {
+        var patch = currentPatch.clone().removeClass('current');
+        $(this).html(patch);
+    }
+});
+
+/*
 $('#patch-list svg').click(function(){
     var x = 4;
     var y = 4;
@@ -14,13 +40,13 @@ $('#patch-list svg').click(function(){
 
     if ($(this).closest('#patch-list-basics').length > 0)
 		patchSize = 100;
-		
-	if (typeof(x) == undefined || x<1) 
+
+	if (typeof(x) == undefined || x<1)
 		x = 4;
 	if (typeof(y) == undefined || y<1)
-		y = 4;		
-    
-    patchwork.attr('viewBox', '0 0 '+ (x*patchSize) + ' ' + (y*patchSize));	
+		y = 4;
+
+    patchwork.attr('viewBox', '0 0 '+ (x*patchSize) + ' ' + (y*patchSize));
 
     for (var i = 0; i < x; i++) {
         for (var j = 0; j < y; j++) {
@@ -37,6 +63,7 @@ $('#patch-list svg').click(function(){
     $('#fabric-list').show();
     $('#save-patchwork').show();
 });
+*/
 
 $(document).on('click', '#fabric-list .fabric:not(.new)', function(){
 	$(".current").removeClass("current");
@@ -57,16 +84,16 @@ $(document).on('click', '#fabric-list .fabric:not(.new)', function(){
     }
 });
 
-$('#create-board').on('click', 'polygon', function(){
-    var patchworkFabrics = $('#patchwork-fabrics').val();
-    patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
-
-    if ( $.inArray(activeFabric.id, patchworkFabrics) === -1){
-        patchworkFabrics.push(activeFabric.id);
-        $('#patchwork-fabrics').val(patchworkFabrics);
-    }
-	$(this).attr('fill', activeFabric.color);
-});
+// $('#create-board').on('click', 'polygon', function(){
+//     var patchworkFabrics = $('#patchwork-fabrics').val();
+//     patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
+//
+//     if ( $.inArray(activeFabric.id, patchworkFabrics) === -1){
+//         patchworkFabrics.push(activeFabric.id);
+//         $('#patchwork-fabrics').val(patchworkFabrics);
+//     }
+// 	$(this).attr('fill', activeFabric.color);
+// });
 
 $('#add-fabric').click(function() {
 	var inputs = document.querySelectorAll('.inputfile');
@@ -87,13 +114,13 @@ $('#add-fabric').click(function() {
 				label.innerHTML = labelVal;
 		});
 	});
-	
-	
+
+
 	var dialog = $('#save-fabric-form').closest('.ui-dialog');
-	
+
 	if( dialog.length > 0 )
 	   $('#save-fabric-form').dialog('open');
-	else    
+	else
 		$('#save-fabric-form').dialog({title: "Dodaj nowy materiał"});
 
 });
@@ -140,10 +167,3 @@ function showSpinner(){
 function hideSpinner(){
 	$("#loading-gears-wrapper").hide();
 }
-
-
-
-
-
-
-

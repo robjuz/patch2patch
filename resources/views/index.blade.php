@@ -26,7 +26,7 @@
 
 <header>
 	<div id="logo">
-		<a>
+		<a href='/'>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406 406"><path fill="#ffd908" d="M0 0h406v406H0z"/><text font-weight="bold" stroke="#000" transform="matrix(4.28738 0 0 4.28738 -395.046 -230.374)" text-anchor="middle" font-family="Cursive" font-size="24" y="86.193" x="136.189" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#e85d08">PATCH</text><text font-weight="bold" stroke="#000" transform="matrix(4.28032 0 0 4.28032 -388.47 -223.452)" text-anchor="middle" font-family="Cursive" font-size="24" y="135.138" x="135.269" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#e85d08">PATCH</text><text stroke="#000" transform="matrix(8.83217 0 0 8.83217 -2101.346 -1879.72)" text-anchor="middle" font-family="Cursive" font-size="24" y="242.021" x="259.149" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#ff3506">2</text></svg>
 		</a>
 	</div>
