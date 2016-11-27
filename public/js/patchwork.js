@@ -1,3 +1,5 @@
+$('#tabs').tabs();
+
 /**
 * Positioning patches
 **/
@@ -8,6 +10,8 @@ var currentPatch;
 //     currentPatch = undefined;
 // });
 $('#patch-list svg').click(function(e) {
+    $('#create-board, #save-patchwork').show();
+    $(".current").removeClass("current");
      e.stopPropagation();
     $('#welcome').hide();
     $('#patchwork').show();
@@ -18,9 +22,10 @@ $('#patch-list svg').click(function(e) {
     currentPatch = $(this).find('.main-group');
 });
 $('#patchwork').on('click', 'g', function(e){
-     e.stopPropagation();
+    e.stopPropagation();
     if (currentPatch !== undefined) {
         var patch = currentPatch.clone().removeClass('current');
+        patch.find('polygon').removeAttr('class').attr('fill', '#FFF');
         $(this).html(patch);
     }
 });
@@ -90,46 +95,9 @@ $('#add-row-top').click(function(){
 * Positioning fabrics
 */
 var activeFabric = null;
-/*
-$('#patch-list svg').click(function(){
-    var x = 4;
-    var y = 4;
-    $(this).addClass("current");
 
-    x = +prompt('Ile elementów ma być w poziomie?');
-    y = +prompt('Ile elementów ma być w pionie?');
-    var patch = $(this).find('g.main-group');
-    var patchwork = $('#patchwork');
-    var patchSize = 200;
-
-    if ($(this).closest('#patch-list-basics').length > 0)
-		patchSize = 100;
-
-	if (typeof(x) == undefined || x<1)
-		x = 4;
-	if (typeof(y) == undefined || y<1)
-		y = 4;
-
-    patchwork.attr('viewBox', '0 0 '+ (x*patchSize) + ' ' + (y*patchSize));
-
-    for (var i = 0; i < x; i++) {
-        for (var j = 0; j < y; j++) {
-            var patchToAdd = patch.clone();
-            patchToAdd.find("polygon").removeAttr("class");
-            patchToAdd.attr('transform','translate('+ (patchSize*i) + ','+ (patchSize*j) +')');
-            patchToAdd.find('polygon').attr('fill', 'white');
-            patchwork.append(patchToAdd);
-        }
-    }
-
-    $('#patch-list').hide();
-    $('#welcome').hide();
-    $('#fabric-list').show();
-    $('#save-patchwork').show();
-});
-*/
-
-$(document).on('click', '#fabric-list .fabric:not(.new)', function(){
+$(document).on('click', '#fabric-list .fabric:not(.new)', function(e){
+    currentPatch = undefined;
 	$(".current").removeClass("current");
 	$(this).addClass("current");
     var pattern = $(this).find('pattern');
@@ -148,16 +116,16 @@ $(document).on('click', '#fabric-list .fabric:not(.new)', function(){
     }
 });
 
-// $('#create-board').on('click', 'polygon', function(){
-//     var patchworkFabrics = $('#patchwork-fabrics').val();
-//     patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
-//
-//     if ( $.inArray(activeFabric.id, patchworkFabrics) === -1){
-//         patchworkFabrics.push(activeFabric.id);
-//         $('#patchwork-fabrics').val(patchworkFabrics);
-//     }
-// 	$(this).attr('fill', activeFabric.color);
-// });
+$('#patchwork').on('click', 'polygon', function(){
+    var patchworkFabrics = $('#patchwork-fabrics').val();
+    patchworkFabrics = JSON.parse("[" + patchworkFabrics + "]");
+    if ( $.inArray(activeFabric.id, patchworkFabrics) === -1){
+        patchworkFabrics.push(activeFabric.id);
+        $('#patchwork-fabrics').val(patchworkFabrics);
+    }
+
+	$(this).attr('fill', activeFabric.color);
+});
 
 $('#add-fabric').click(function() {
 	var inputs = document.querySelectorAll('.inputfile');

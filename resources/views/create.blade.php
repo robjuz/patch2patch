@@ -16,27 +16,16 @@
                 <button type="button">Dodaj kolumnę</button>
             </div>
             <div id="patchwork-wrapper" class="hasSVG">
-                <!-- initial patchwork (5x3) -->
+                <!-- initial patchwork (2x2) -->
                 <svg id="patchwork"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns="http://www.w3.org/1999/xlink"
                     version="1.1"
-                    viewBox="0 0 500 300">
+                    viewBox="0 0 200 200">
                     <g transform="translate(0,0)">  <rect width="100" height="100"/></g>
                     <g transform="translate(100,0)"><rect width="100" height="100"/></g>
-                    <g transform="translate(200,0)"><rect width="100" height="100"/></g>
-                    <g transform="translate(300,0)"><rect width="100" height="100"/></g>
-                    <g transform="translate(400,0)"><rect width="100" height="100"/></g>
                     <g transform="translate(0,100)"><rect width="100" height="100"/></g>
                     <g transform="translate(100,100)"><rect width="100" height="100"/></g>
-                    <g transform="translate(200,100)"><rect width="100" height="100"/></g>
-                    <g transform="translate(300,100)"><rect width="100" height="100"/></g>
-                    <g transform="translate(400,100)"><rect width="100" height="100"/></g>
-                    <g transform="translate(0,200)"><rect width="100" height="100"/></g>
-                    <g transform="translate(100,200)"><rect width="100" height="100"/></g>
-                    <g transform="translate(200,200)"><rect width="100" height="100"/></g>
-                    <g transform="translate(300,200)"><rect width="100" height="100"/></g>
-                    <g transform="translate(400,200)"><rect width="100" height="100"/></g>
                 </svg>
             </div>
             <div id="add-column-right">
@@ -64,12 +53,17 @@
 	</div>
 </div>
 <div id="side-panel">
-    <div id="patch-list">
-		@include('patches.basics')
-        <!-- @include('patches.triangles') -->
-        <!-- @include('patches.rectangles') -->
-    </div>
-    <div id="fabric-list">
+    <div id="tabs">
+      <ul>
+        <li><a href="#patch-list">Łatki</a></li>
+        <li><a href="#fabric-list">Materiały</a></li>
+      </ul>
+        <div id="patch-list">
+    		@include('patches.basics')
+            <!-- @include('patches.triangles') -->
+            <!-- @include('patches.rectangles') -->
+        </div>
+        <div id="fabric-list">
 		<h2>Materiały:</h2>
         @foreach( $fabrics as $fabric)
             <div class="fabric">
@@ -116,6 +110,7 @@
                 <button type="submit" class="save"> Dodaj </button>
             </form>
 		</div>
+    </div>
     </div>
 </div>
 @endsection()
