@@ -36,6 +36,7 @@
             </div>
         </div>
 
+        <button id="preview" type="button" class="preview">Podgląd</button>
 		<button id="save-patchwork" class="save">Zapisz</button>
         <form id="save-patchwork-form" method="POST" action="<% route('patchwork.store') %>">
             <input id="patchwork-content" type="hidden" name="content" value=""/>

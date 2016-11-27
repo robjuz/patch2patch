@@ -65,7 +65,7 @@ $('#add-row-bottom').click(function(){
     viewBox = patchwork.viewBox.baseVal;
 
     var svg = $('#patchwork').svg().svg('get');
-    for (var i=viewBox.x; i<= (viewBox.width+viewBox.x); i+=100) {
+    for (var i=viewBox.x; i< (viewBox.width+viewBox.x); i+=100) {
         var g = svg.group({transform: 'translate('+i+','+(viewBox.height + viewBox.y)+')'});
         svg.rect(g, 0, 0, 100, 100);
     }
@@ -81,7 +81,7 @@ $('#add-row-top').click(function(){
     viewBox.height += 100;
 
     var svg = $('#patchwork').svg().svg('get');
-    for (var i=viewBox.x; i<= (viewBox.width+viewBox.x); i+=100) {
+    for (var i=viewBox.x; i< (viewBox.width+viewBox.x); i+=100) {
         var g = svg.group({transform: 'translate('+i+','+viewBox.y+')'});
         svg.rect(g, 0, 0, 100, 100);
     }
@@ -192,6 +192,25 @@ $('#save-patchwork-form').submit(function(e)
     var str = serializer.serializeToString(svg);
     $('#patchwork-content').val(str);
 });
+
+$('#preview').click(function(){
+    $('#create-board').hide();
+    $('#patchwork-wrapper').dialog(
+    {
+        'width': 0.8 * $(window).width(),
+        'height': 0.8 * $(window).height(),
+        // 'left': '0px',
+        // 'top':'0px',
+        dialogClass: "preview",
+        title: 'Podgląd',
+        // resizable: false,
+        close: function(event, ui)
+        {
+            $('#patchwork-wrapper').dialog('destroy');
+            $('#create-board').show();
+        }
+    });
+})
 
 function showSpinner(){
 	$("#loading-gears-wrapper").show();
