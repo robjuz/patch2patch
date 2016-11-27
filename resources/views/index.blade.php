@@ -7,10 +7,11 @@
 		Patchworkarnia
 	</title>
 
-	 <link rel="stylesheet" href="/css/main.css">
-	 <link rel="stylesheet" href="/css/jquery-ui.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lobster" rel="stylesheet">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/jquery-ui.min.css">
 
-	 <script>
+	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -18,8 +19,7 @@
 
 	  ga('create', 'UA-76228389-2', 'auto');
 	  ga('send', 'pageview');
-
-	</script>
+    </script>
 
 </head>
 <body>
@@ -27,7 +27,7 @@
 <header>
 	<div id="logo">
 		<a href='/'>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406 406"><path fill="#ffd908" d="M0 0h406v406H0z"/><text font-weight="bold" stroke="#000" transform="matrix(4.28738 0 0 4.28738 -395.046 -230.374)" text-anchor="middle" font-family="Cursive" font-size="24" y="86.193" x="136.189" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#e85d08">PATCH</text><text font-weight="bold" stroke="#000" transform="matrix(4.28032 0 0 4.28032 -388.47 -223.452)" text-anchor="middle" font-family="Cursive" font-size="24" y="135.138" x="135.269" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#e85d08">PATCH</text><text stroke="#000" transform="matrix(8.83217 0 0 8.83217 -2101.346 -1879.72)" text-anchor="middle" font-family="Cursive" font-size="24" y="242.021" x="259.149" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#ff3506">2</text></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406 406"><path fill="#ffd908" d="M0 0h406v406H0z"/><text font-weight="bold" stroke="#000" transform="matrix(4.28738 0 0 4.28738 -395.046 -230.374)" text-anchor="middle" font-family="Dancing Script" font-size="24" y="86.193" x="136.189" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#e85d08">PATCH</text><text font-weight="bold" stroke="#000" transform="matrix(4.28032 0 0 4.28032 -388.47 -223.452)" text-anchor="middle" font-family="Dancing Script" font-size="24" y="135.138" x="135.269" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#e85d08">PATCH</text><text stroke="#000" transform="matrix(8.83217 0 0 8.83217 -2101.346 -1879.72)" text-anchor="middle" font-family="Dancing Script" font-size="16" y="242.021" x="259.149" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#ff3506">2</text></svg>
 		</a>
 	</div>
 	<menu>

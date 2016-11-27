@@ -187,6 +187,7 @@ $('#save-patchwork-form').submit(function(e)
 {
 	showSpinner();
     var svg = document.getElementById('patchwork');
+    $(svg).removeAttr('id');
     var serializer = new XMLSerializer();
     var str = serializer.serializeToString(svg);
     $('#patchwork-content').val(str);

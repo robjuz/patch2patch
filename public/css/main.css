@@ -1,10 +1,11 @@
 html{
 	position: relative;
-	font-family: Times New Roman;
 }
 
 body{
-background-color: #f5f5dc;
+	background-color: #f5f5dc;
+	font-family: 'Lobster', cursive;
+	font-size: 14px;
 	margin: 0;
 }
 
@@ -39,6 +40,7 @@ header{
 
 menu{
 	padding: 15px;
+	font-size: 1.5em;
 }
 
 .menuitem{
@@ -52,7 +54,7 @@ menu{
 	padding: 5px;
 	background-color: #fffacd;
 	border: 3px dashed #600000;
-	text-transform: uppercase;
+	text-transform: capitalize;;
 	margin: 5px 0;
 }
 
@@ -79,9 +81,9 @@ main{
 }
 
 .single-patchwork{
-	height: 220px;
-
+	height: 270px;
 	padding: 20px;
+	padding-top: 0;
 	text-align: center;
 	background-color: #fff;
 	border: 1px solid #222;
@@ -89,7 +91,7 @@ main{
 }
 
 .single-patchwork .title{
-	font-size: 14px;
+	/*font-size: 14px;*/
 	font-weight: bold;
 	text-align: left;
 	overflow: hidden;
@@ -100,12 +102,13 @@ main{
 .single-patchwork .date{
 	margin-top: 5px;
 	color: #111;
-	font-size: 10px;
-	float: left;
+	/*font-size: 10px;*/
+	text-align: left;
 }
 
 .single-patchwork .preview-wrapper{
-	height: 170px;
+	height: 160px;
+	padding-top: 10px;
 	width: 100%;
 }
 
@@ -120,12 +123,12 @@ main{
 
 .single-patchwork .views{
 	float: left;
-	font-size: 12px;
+	/*font-size: 12px;*/
 }
 
 .single-patchwork .likes{
 	float: right;
-	font-size: 12px;
+	/*font-size: 12px;*/
 }
 
 footer{
@@ -306,10 +309,11 @@ button.save{
 }
 
 h1{
-    border-bottom: 2px dashed #660000;
-    text-align: center;
-    text-transform: uppercase;
+	border-bottom: 2px dashed #660000;
     margin-bottom: 0;
+    font-size: 4em;
+    text-transform: capitalize;
+    font-weight: normal;
 }
 
 #patchwork {
