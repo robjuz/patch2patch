@@ -3,10 +3,10 @@
 **/
 var currentPatch;
 
-$(document).click(function() {
-    $('#patch-list svg.current').removeClass('current');
-    currentPatch = undefined;
-});
+// $(document).click(function() {
+//     $('#patch-list svg.current').removeClass('current');
+//     currentPatch = undefined;
+// });
 $('#patch-list svg').click(function(e) {
      e.stopPropagation();
     $('#welcome').hide();
@@ -30,13 +30,29 @@ $('#add-column-right').click(function(){
     viewBox = patchwork.viewBox.baseVal;
 
     var svg = $('#patchwork').svg().svg('get');
-    for (var i=0; i<= patchwork.viewBox.baseVal.height; i+=100) {
-        var g = svg.group({transform: 'translate('+viewBox.width+','+i+')'});
-        svg.rect(g);
+    for (var i=viewBox.y; i< (viewBox.height+viewBox.y); i+=100) {
+        var g = svg.group({transform: 'translate('+(viewBox.width + viewBox.x)+','+i+')'});
+        svg.rect(g, 0, 0, 100, 100);
     }
 
     viewBox.width += 100;
     patchwork.style.width = $('#patchwork').width() + 100;
+    $('#patchwork-wrapper').scrollLeft($('#patchwork').width());
+
+});
+$('#add-column-left').click(function(){
+    var patchwork = document.querySelector('#patchwork');
+    viewBox = patchwork.viewBox.baseVal;
+    viewBox.x -= 100;
+    viewBox.width += 100;
+
+    var svg = $('#patchwork').svg().svg('get');
+    for (var i=viewBox.y; i< (viewBox.height+viewBox.y); i+=100) {
+        var g = svg.group({transform: 'translate('+viewBox.x+','+i+')'});
+        svg.rect(g, 0, 0, 100, 100);
+    }
+    patchwork.style.width = $('#patchwork').width() + 100;
+    $('#patchwork-wrapper').scrollLeft(0);
 
 });
 $('#add-row-bottom').click(function(){
@@ -44,13 +60,29 @@ $('#add-row-bottom').click(function(){
     viewBox = patchwork.viewBox.baseVal;
 
     var svg = $('#patchwork').svg().svg('get');
-    for (var i=0; i<= patchwork.viewBox.baseVal.width; i+=100) {
-        var g = svg.group({transform: 'translate('+i+','+viewBox.height+')'});
-        svg.rect(g);
+    for (var i=viewBox.x; i<= (viewBox.width+viewBox.x); i+=100) {
+        var g = svg.group({transform: 'translate('+i+','+(viewBox.height + viewBox.y)+')'});
+        svg.rect(g, 0, 0, 100, 100);
     }
-
     viewBox.height += 100;
     patchwork.style.height = $('#patchwork').height() + 100;
+    $('#patchwork-wrapper').scrollTop($('#patchwork').height());
+
+});
+$('#add-row-top').click(function(){
+    var patchwork = document.querySelector('#patchwork');
+    viewBox = patchwork.viewBox.baseVal;
+    viewBox.y -= 100;
+    viewBox.height += 100;
+
+    var svg = $('#patchwork').svg().svg('get');
+    for (var i=viewBox.x; i<= (viewBox.width+viewBox.x); i+=100) {
+        var g = svg.group({transform: 'translate('+i+','+viewBox.y+')'});
+        svg.rect(g, 0, 0, 100, 100);
+    }
+
+    patchwork.style.height = $('#patchwork').height() + 100;
+    $('#patchwork-wrapper').scrollTop(0);
 
 });
 

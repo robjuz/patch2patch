@@ -320,13 +320,11 @@ h1{
 }
 
 #patchwork rect {
-	width: 100px;
-	height: 100px;
 	fill: transparent;
 	stroke: black;
-	stroke-width: 1px;
+	stroke-dasharray: 5, 10;
 	stroke-dashoffset: 5;
-    stroke-dasharray: 5, 10;
+	stroke-width: 1px;
 }
 
 #patchwork .date{
@@ -347,9 +345,12 @@ h1{
 	}
 }
 #patchwork-wrapper {
+	border: 1px solid;
+	height: 500px;
 	overflow: scroll;
 	text-align: center;
-	border: 1px solid;
+	vertical-align: middle;
+	width: 75%;
 }
 
 #add-row-top,
@@ -361,10 +362,6 @@ h1{
 #add-column-right,
 #patchwork-wrapper {
 	display: inline-block;
-}
-#patchwork-wrapper {
-	vertical-align: middle;
-	width: 75%
 }
 
 #add-column-right,

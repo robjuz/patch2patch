@@ -22,21 +22,21 @@
                     xmlns="http://www.w3.org/1999/xlink"
                     version="1.1"
                     viewBox="0 0 500 300">
-                    <g transform="translate(0,0)">  <rect /></g>
-                    <g transform="translate(100,0)"><rect /></g>
-                    <g transform="translate(200,0)"><rect /></g>
-                    <g transform="translate(300,0)"><rect /></g>
-                    <g transform="translate(400,0)"><rect /></g>
-                    <g transform="translate(0,100)"><rect /></g>
-                    <g transform="translate(100,100)"><rect /></g>
-                    <g transform="translate(200,100)"><rect /></g>
-                    <g transform="translate(300,100)"><rect /></g>
-                    <g transform="translate(400,100)"><rect /></g>
-                    <g transform="translate(0,200)"><rect /></g>
-                    <g transform="translate(100,200)"><rect /></g>
-                    <g transform="translate(200,200)"><rect /></g>
-                    <g transform="translate(300,200)"><rect /></g>
-                    <g transform="translate(400,200)"><rect /></g>
+                    <g transform="translate(0,0)">  <rect width="100" height="100"/></g>
+                    <g transform="translate(100,0)"><rect width="100" height="100"/></g>
+                    <g transform="translate(200,0)"><rect width="100" height="100"/></g>
+                    <g transform="translate(300,0)"><rect width="100" height="100"/></g>
+                    <g transform="translate(400,0)"><rect width="100" height="100"/></g>
+                    <g transform="translate(0,100)"><rect width="100" height="100"/></g>
+                    <g transform="translate(100,100)"><rect width="100" height="100"/></g>
+                    <g transform="translate(200,100)"><rect width="100" height="100"/></g>
+                    <g transform="translate(300,100)"><rect width="100" height="100"/></g>
+                    <g transform="translate(400,100)"><rect width="100" height="100"/></g>
+                    <g transform="translate(0,200)"><rect width="100" height="100"/></g>
+                    <g transform="translate(100,200)"><rect width="100" height="100"/></g>
+                    <g transform="translate(200,200)"><rect width="100" height="100"/></g>
+                    <g transform="translate(300,200)"><rect width="100" height="100"/></g>
+                    <g transform="translate(400,200)"><rect width="100" height="100"/></g>
                 </svg>
             </div>
             <div id="add-column-right">
