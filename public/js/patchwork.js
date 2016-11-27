@@ -1,7 +1,6 @@
-
-
-var activeFabric = null;
-
+/**
+* Positioning patches
+**/
 var currentPatch;
 $(document).click(function() {
     $('#patch-list svg.current').removeClass('current');
@@ -17,7 +16,6 @@ $('#patch-list svg').click(function(e) {
     $(this).addClass("current");
     currentPatch = $(this).find('.main-group');
 });
-// $('#patchwork').sortable();
 $('#patchwork g').click(function(e){
      e.stopPropagation();
     if (currentPatch !== undefined) {
@@ -26,6 +24,10 @@ $('#patchwork g').click(function(e){
     }
 });
 
+/**
+* Positioning fabrics
+*/
+var activeFabric = null;
 /*
 $('#patch-list svg').click(function(){
     var x = 4;

@@ -2,30 +2,49 @@
 
 @section('content')
 <div id="main-panel">
+    <div id="welcome">
+        Tutaj będzie Twój patchwork! <br>
+        Najpierw wybierz z jakich elementów ma się składać <br>
+        <span>→</span>
+    </div>
     <div id="create-board">
-		<div id="welcome">
-			Tutaj będzie Twój patchwork! <br>
-			Najpierw wybierz z jakich elementów ma się składać <br>
-			<span>→</span>
-		</div>
-        <div id="patchwork-wrapper">
-            <svg id="patchwork"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns="http://www.w3.org/1999/xlink"
-                version="1.1"
-                viewBox="0 0 500 200">
-                <g transform="translate(0,0)">  <rect /></g>
-                <g transform="translate(100,0)"><rect /></g>
-                <g transform="translate(200,0)"><rect /></g>
-                <g transform="translate(300,0)"><rect /></g>
-                <g transform="translate(400,0)"><rect /></g>
-                <g transform="translate(0,100)"><rect /></g>
-                <g transform="translate(100,100)"><rect /></g>
-                <g transform="translate(200,100)"><rect /></g>
-                <g transform="translate(300,100)"><rect /></g>
-                <g transform="translate(400,100)"><rect /></g>
-
-            </svg>
+        <div>
+            <div id="add-row-top">
+                <button type="button">Dodaj wiersz</button>
+            </div>
+            <div id="add-column-left">
+                <button type="button">Dodaj kolumnę</button>
+            </div>
+            <div id="patchwork-wrapper">
+                <!-- initial patchwork (5x3) -->
+                <svg id="patchwork"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    viewBox="0 0 500 300">
+                    <g transform="translate(0,0)">  <rect /></g>
+                    <g transform="translate(100,0)"><rect /></g>
+                    <g transform="translate(200,0)"><rect /></g>
+                    <g transform="translate(300,0)"><rect /></g>
+                    <g transform="translate(400,0)"><rect /></g>
+                    <g transform="translate(0,100)"><rect /></g>
+                    <g transform="translate(100,100)"><rect /></g>
+                    <g transform="translate(200,100)"><rect /></g>
+                    <g transform="translate(300,100)"><rect /></g>
+                    <g transform="translate(400,100)"><rect /></g>
+                    <g transform="translate(0,200)"><rect /></g>
+                    <g transform="translate(100,200)"><rect /></g>
+                    <g transform="translate(200,200)"><rect /></g>
+                    <g transform="translate(300,200)"><rect /></g>
+                    <g transform="translate(400,200)"><rect /></g>
+                </svg>
+            </div>
+            <div id="add-column-right">
+                <button type="button">Dodaj kolumnę</button>
+            </div>
+            <div id="add-row-bottom">
+                <button type="button">Dodaj wiersz</button>
+            </div>
         </div>
 
 		<button id="save-patchwork" class="save">Zapisz</button>

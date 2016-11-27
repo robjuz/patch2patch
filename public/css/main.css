@@ -210,8 +210,8 @@ footer span{
 }
 
 #create-board svg {
-	width: 100%;
-	height: auto;
+	/*width: 100%;
+	height: auto;*/
 	cursor: pointer;
 }
 
@@ -317,7 +317,6 @@ h1{
 	position: relative;;
     width: 500px;
     height: 300px;
-    border: 1px solid;
 }
 
 #patchwork rect {
@@ -346,4 +345,29 @@ h1{
 	.single-patchwork-wrapper {
 		width: 25%;
 	}
+}
+#patchwork-wrapper {
+	overflow: scroll;
+	text-align: center;
+	border: 1px solid;
+}
+
+#add-row-top,
+#add-row-bottom {
+	text-align: center;
+}
+
+#add-column-left,
+#add-column-right,
+#patchwork-wrapper {
+	display: inline-block;
+}
+#patchwork-wrapper {
+	vertical-align: middle;
+	width: 75%
+}
+
+#add-column-right,
+#add-column-left {
+	width: 10%;
 }
