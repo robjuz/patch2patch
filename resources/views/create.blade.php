@@ -15,7 +15,7 @@
             <div id="add-column-left">
                 <button type="button">Dodaj kolumnę</button>
             </div>
-            <div id="patchwork-wrapper">
+            <div id="patchwork-wrapper" class="hasSVG">
                 <!-- initial patchwork (5x3) -->
                 <svg id="patchwork"
                     xmlns="http://www.w3.org/2000/svg"

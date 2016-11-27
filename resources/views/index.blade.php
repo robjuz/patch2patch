@@ -58,8 +58,8 @@
 	</span>
 
 	<script src="/js/jquery.js"></script>
-	<script src="/js/jquery.svgdom.min.js"></script>
 	<script src="/js/jquery.svg.min.js"></script>
+	<script src="/js/jquery.svgdom.min.js"></script>
 	<script src="/js/jquery-ui.min.js"></script>
 	<script src="/js/patchwork.js"></script>
 </footer>

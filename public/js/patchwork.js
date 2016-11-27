@@ -2,6 +2,7 @@
 * Positioning patches
 **/
 var currentPatch;
+
 $(document).click(function() {
     $('#patch-list svg.current').removeClass('current');
     currentPatch = undefined;
@@ -16,12 +17,41 @@ $('#patch-list svg').click(function(e) {
     $(this).addClass("current");
     currentPatch = $(this).find('.main-group');
 });
-$('#patchwork g').click(function(e){
+$('#patchwork').on('click', 'g', function(e){
      e.stopPropagation();
     if (currentPatch !== undefined) {
         var patch = currentPatch.clone().removeClass('current');
         $(this).html(patch);
     }
+});
+
+$('#add-column-right').click(function(){
+    var patchwork = document.querySelector('#patchwork');
+    viewBox = patchwork.viewBox.baseVal;
+
+    var svg = $('#patchwork').svg().svg('get');
+    for (var i=0; i<= patchwork.viewBox.baseVal.height; i+=100) {
+        var g = svg.group({transform: 'translate('+viewBox.width+','+i+')'});
+        svg.rect(g);
+    }
+
+    viewBox.width += 100;
+    patchwork.style.width = $('#patchwork').width() + 100;
+
+});
+$('#add-row-bottom').click(function(){
+    var patchwork = document.querySelector('#patchwork');
+    viewBox = patchwork.viewBox.baseVal;
+
+    var svg = $('#patchwork').svg().svg('get');
+    for (var i=0; i<= patchwork.viewBox.baseVal.width; i+=100) {
+        var g = svg.group({transform: 'translate('+i+','+viewBox.height+')'});
+        svg.rect(g);
+    }
+
+    viewBox.height += 100;
+    patchwork.style.height = $('#patchwork').height() + 100;
+
 });
 
 /**
