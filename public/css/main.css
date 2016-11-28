@@ -1,5 +1,6 @@
 html{
 	position: relative;
+	height: 100%;
 }
 
 body{
@@ -7,6 +8,7 @@ body{
 	font-family: 'Lobster', cursive;
 	font-size: 14px;
 	margin: 0;
+	margin-bottom: 15px;
 }
 
 .clearfix {
@@ -135,6 +137,7 @@ footer{
 	position: absolute;
 	bottom: 0;
 	left: 50%;
+	height: 15px;
 }
 
 footer span{
@@ -146,8 +149,6 @@ footer span{
 #side-panel {
 	width: 250px;
 	float: right;
-	height: 100vh;
-	overflow-y: scroll;
 }
 #patch-list svg {
 	width: 40%;
@@ -159,6 +160,41 @@ footer span{
 	padding: 6px !important;
 	border: 2px dashed #800000;
 	background-color: #fafad2;
+}
+
+#tabs ul{
+	list-style: outside none none;
+	padding-left: 0;
+}
+
+#tabs ul li{
+	position: relative;
+	float: left;
+	padding: 5px 12px;
+	font-size: 18px;
+	margin: 5px 5px 5px 0;
+	background-color: #fff;
+	border: 2px dashed #700;
+}
+
+#tabs ul li.ui-state-active{
+	background-color: #fafad2;
+	border-color: #522;
+}
+
+#tabs ul li:hover{
+	background-color: #fafac2;
+	border-color: #733;
+}
+
+#fabric-list, #patch-list{
+	clear: both;
+	width: 100%;
+	height: 85vh;
+	border: 2px dashed #800;
+	background-color: #fff;
+	overflow-y: scroll;
+	padding: 10px;
 }
 
 #fabric-list {
@@ -357,6 +393,17 @@ h1{
 	width: 75%;
 }
 
+#add-row-top button, 
+#add-row-bottom button, 
+#add-column-right button, 
+#add-column-left button{
+	background-color: transparent;
+	border: none;
+	padding: 5px;
+	font-size: 18;
+	font-family: Times New Roman;
+}
+
 #add-row-top,
 #add-row-bottom {
 	text-align: center;
@@ -370,7 +417,9 @@ h1{
 
 #add-column-right,
 #add-column-left {
-	width: 10%;
+	width: 5px;
+	word-break: break-all;
+	letter-spacing: 30px;
 }
 .preview {
 	text-align: center;

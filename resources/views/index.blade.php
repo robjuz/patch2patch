@@ -9,7 +9,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lobster" rel="stylesheet">
 	<link rel="stylesheet" href="/css/main.css">
-	<link rel="stylesheet" href="/css/jquery-ui.min.css">
+	<!--<link rel="stylesheet" href="/css/jquery-ui.min.css">-->
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
