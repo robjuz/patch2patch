@@ -27,8 +27,7 @@ a:visited{
 
 header{
 	width: 225px;
-
-	float: left;
+	position: fixed;
 }
 
 #logo{
@@ -71,7 +70,7 @@ menu{
 main{
 	width: calc(100% - 255px);
 
-	float: left;
+	float: right;
 	margin: 15px auto;
 }
 
@@ -146,7 +145,7 @@ footer span{
 #side-panel {
 	width: 250px;
 	float: right;
-	height: 100vh;
+	height: calc(100vh - 30px);
 	overflow-y: scroll;
 }
 #patch-list svg {
