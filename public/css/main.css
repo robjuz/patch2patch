@@ -265,10 +265,9 @@ polygon {
 	display: none;
 }
 
-button.save{
+.btn{
 	background-color: #ffd;
 	border: 2px dashed #800;
-	float: right;
 	margin-top: 15px;
 	padding: 5px;
 }
@@ -349,7 +348,7 @@ h1{
 }
 #patchwork-wrapper {
 	border: 1px solid;
-	height: 400px;
+	height: calc(100vh - 150px);
 	overflow: scroll;
 	text-align: center;
 	vertical-align: middle;
@@ -386,4 +385,22 @@ h1{
 	height: 100% !important;
 	max-height: 100% !important;
 	max-width: 100% !important;
+}
+
+#edit #create-board,
+#edit #side-panel,
+#edit #save-patchwork {
+	display: block;
+}
+
+#details #fabric-list {
+	display: inline-block;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
 }

@@ -212,7 +212,11 @@ $('#preview').click(function(){
             $('#create-board').show();
         }
     });
-})
+});
+
+$(window).on('resize', function() {
+    
+});
 
 function showSpinner(){
 	$("#loading-gears-wrapper").show();

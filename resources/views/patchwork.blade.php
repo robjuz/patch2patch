@@ -1,19 +1,18 @@
 @extends('index')
 
 @section('content')
-<div id="details">
+<div id='details'>
 	<h1 class="title">
 		<% $patchwork->title or 'Patchwork '.$patchwork->id %>
 	</h1>
 	<div class="date">
 		dodano: <span><% $patchwork->created_at->format('d.m.Y') %></span>
 	</div>
-		
-	<div class="preview">
+	<div id="main-panel">
 		<?= $patchwork->content ?>
 	</div>
 
-	<div id="fabric-list" class="edit">
+	<div id="side-panel">
 		<h2>Materiały:</h2>
         @foreach( $patchwork->fabrics as $fabric)
             <div class="fabric">
@@ -32,10 +31,6 @@
     		</div>
         @endforeach
 	</div>
-
-	<div>
-	</div>
-
 	<svg height="0">
 		@foreach( $patchwork->fabrics as $fabric)
 			<defs>
