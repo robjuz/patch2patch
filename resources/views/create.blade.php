@@ -14,7 +14,8 @@
         <form id="save-patchwork-form" method="POST" action="<% route('patchwork.store') %>">
             @include('partials.save-patchwork-form')
         </form>
-    </div>
+	</div>
+
     <div id="side-panel">
         @include('partials.create-side-panel')
     </div>
