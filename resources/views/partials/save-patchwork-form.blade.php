@@ -17,4 +17,4 @@
     }?>
             "></textarea>
 </div>
-<button type="submit" class="save"> Zapisz </button>
+<button type="submit" class="btn pull-right"> Zapisz </button>

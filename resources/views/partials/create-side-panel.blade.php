@@ -9,7 +9,6 @@
         <!-- @include('patches.rectangles') -->
     </div>
     <div id="fabric-list">
-        <h2>Materiały:</h2>
         @foreach( $fabrics as $fabric)
             <div class="fabric">
                 <svg height="0">
@@ -52,7 +51,7 @@
                     <label for="title">Kolor</label>
                     <input type="color" name="color"/>
                 </div>
-                <button type="submit" class="save"> Dodaj </button>
+                <button type="submit" class="btn pull-right"> Dodaj </button>
             </form>
         </div>
     </div>

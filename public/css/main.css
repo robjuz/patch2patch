@@ -72,7 +72,7 @@ menu{
 main{
 	width: calc(100% - 255px);
 
-	float: right;
+	float: left;
 	margin: 15px auto;
 }
 
@@ -161,6 +161,12 @@ footer span{
 	background-color: #fafad2;
 }
 
+#side-panel .ui-widget.ui-widget-content,
+#side-panel .ui-tabs-nav {
+    background-color: transparent;
+    border: none;
+}
+
 #tabs ul{
 	list-style: outside none none;
 	padding-left: 0;
@@ -169,16 +175,26 @@ footer span{
 #tabs ul li{
 	position: relative;
 	float: left;
-	padding: 5px 12px;
+	/*padding: 5px 12px;*/
 	font-size: 18px;
 	margin: 5px 5px 5px 0;
-	background-color: #fff;
+	background-color: #fafad2;
 	border: 2px dashed #700;
+    outline: none;
 }
 
-#tabs ul li.ui-state-active{
-	background-color: #fafad2;
+#tabs ul li a {
+    color: #333;
+    outline: none;
+}
+
+#tabs ul li.ui-state-active {
+	/*background-color: #fafad2;*/
+	background-color: #fff;
 	border-color: #522;
+    color: #333;
+    padding-bottom: 0;
+    font-weight: bold;
 }
 
 #tabs ul li:hover{
@@ -211,7 +227,7 @@ footer span{
 	cursor: pointer;
 }
 
-#fabric-list .fabric-thumbnail {
+#side-panel .fabric-thumbnail {
 	width: 30px;
 	height: 30px;
 	margin: 5px;
@@ -219,7 +235,7 @@ footer span{
 	float: left;
 }
 
-#fabric-list .fabric-color{
+#side-panel .fabric-color{
 	padding: 5px;
 	line-height: 42px;
 }
@@ -299,6 +315,7 @@ polygon {
 #save-fabric-form {
 	clear: both;
 	display: none;
+    overflow: hidden;
 }
 
 .btn{

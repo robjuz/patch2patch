@@ -188,16 +188,15 @@ $('#save-patchwork-form').submit(function(e)
     var str = serializer.serializeToString(svg[0]);
     $('#patchwork-content').val(str);
 
-    var fabricsId = new Array();
-    $(svg).find('polygon').each(function(){
+    var fabricsId = [];
+    svg.find('polygon').each(function(){
         var val = $(this).attr('fabric-id');
-        if (val !== undefined && !$.inArray(val, fabricsId)) {
+        if (val !== undefined && (fabricsId.indexOf(val) == -1)) {
             fabricsId.push(val)
         }
     });
 
     $('#patchwork-fabrics').val(fabricsId);
-    e.preventDefault();
 });
 
 $('#preview').click(function(){
