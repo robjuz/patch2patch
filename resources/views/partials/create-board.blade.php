@@ -10,7 +10,7 @@
         if (isset($patchwork)) {
             echo $patchwork->content;
         } else { ?>
-            <svg id="patchwork"
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns="http://www.w3.org/1999/xlink"
                 version="1.1"
