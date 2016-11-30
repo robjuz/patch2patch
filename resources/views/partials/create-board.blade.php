@@ -6,7 +6,11 @@
         <button type="button">Dodaj kolumnę</button>
     </div>
     <div id="patchwork-wrapper">
-        <?= $patchwork->content ?>
+        <?php
+        if (isset($patchwork)) {
+            echo $patchwork->content;
+        }
+        ?>
     </div>
     <div id="add-column-right">
         <button type="button">Dodaj kolumnę</button>

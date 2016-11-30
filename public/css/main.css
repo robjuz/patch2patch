@@ -29,7 +29,8 @@ a:visited{
 
 header{
 	width: 225px;
-	position: fixed;
+	float: left;
+	background-color: #fff;
 }
 
 #logo{
@@ -147,9 +148,7 @@ footer span{
 
 #side-panel {
 	width: 250px;
-	float: right;
-	height: calc(100vh - 30px);
-	overflow-y: scroll;
+	float:right;
 }
 #patch-list svg {
 	width: 40%;
@@ -325,9 +324,10 @@ polygon {
 }
 
 #loading-gears-wrapper{
-    background-color: rgba(0,0,0,0.4);
+    background-color: #000000;
     display: none;
     height: 100%;
+    opacity: 0.4;
     position: fixed;
     width: 100%;
     z-index: 200;
