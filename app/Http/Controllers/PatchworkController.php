@@ -15,7 +15,7 @@ class PatchworkController extends Controller
      */
     public function index()
     {
-        $patchworks = Patchwork::get();
+        $patchworks = Patchwork::withCount('comments')->get();
         $fabrics = Fabric::get();
         return view('gallery',compact(['patchworks', 'fabrics']));
 
@@ -60,7 +60,8 @@ class PatchworkController extends Controller
     {
 		$patchwork->views++;
 		$patchwork->save();
-        return view('patchwork',compact('patchwork'));
+		$comments = $patchwork->comments()->orderBy('created_at', 'desc')->paginate(10);
+        return view('patchwork',compact('patchwork', 'comments'));
     }
 
     /**

@@ -34,10 +34,10 @@
 		<a class="menuitem active" href="/">
 			Projektowanie
 		</a>
-		<a class="menuitem" href="<% route('patchwork.index') %>">
+		<a class="menuitem" href="{{ route('patchwork.index') }}">
 			Galeria
 		</a>
-		<a class="menuitem">
+		<a class="menuitem" href="{{ route('comment.index') }}">
 			Księga gości
 		</a>
 		<a class="menuitem">

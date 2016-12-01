@@ -11,7 +11,7 @@
         <div id="create-board">
             @include('partials.create-board')
     	</div>
-        <form id="save-patchwork-form" method="POST" action="<% route('patchwork.store') %>">
+        <form id="save-patchwork-form" method="POST" action="{{ route('patchwork.store') }}">
             @include('partials.save-patchwork-form')
         </form>
 	</div>

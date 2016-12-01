@@ -1,8 +1,5 @@
 <?php
 
-use App\Patchwork;
-use App\Fabric;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +16,8 @@ Route::get('/', 'PatchworkController@create');
 
 Route::resource('patchwork', 'PatchworkController', ['except' => [
     'create'
+]]);
+
+Route::resource('comment', 'CommentController', ['only' => [
+    'index', 'store',
 ]]);

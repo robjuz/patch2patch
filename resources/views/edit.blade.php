@@ -6,8 +6,8 @@
         <div id="create-board">
             @include('partials.create-board')
     	</div>
-        <form id="save-patchwork-form" method="POST" action="<% route('patchwork.update', $patchwork) %>">
-            <% method_field('PUT') %>
+        <form id="save-patchwork-form" method="POST" action="{{ route('patchwork.update', $patchwork) }}">
+            {{ method_field('PUT') }}
             @include('partials.save-patchwork-form')
         </form>
     </div>
