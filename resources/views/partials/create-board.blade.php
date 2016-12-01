@@ -1,3 +1,9 @@
+<svg id="initial-patchwork"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns="http://www.w3.org/1999/xlink"
+     version="1.1"
+     height="0">
+</svg>
 <div>
     <div id="add-row-top">
         <button type="button">Dodaj wiersz</button>
@@ -7,7 +13,8 @@
     </div>
     <div id="patchwork-wrapper">
         <?php
-        if (isset($patchwork)) {
+        if (isset($patchwork)) { ?>
+        <?php
             echo $patchwork->content;
         } else { ?>
             <svg

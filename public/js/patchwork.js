@@ -5,10 +5,16 @@ $('#tabs').tabs();
 **/
 var currentPatch;
 
-// $(document).click(function() {
-//     $('#patch-list svg.current').removeClass('current');
-//     currentPatch = undefined;
-// });
+$(document).ready(function () {
+    var svg = $('#create-board #initial-patchwork').svg({onLoad : function (svg) {
+        var basicSvg = $('#create-board #patchwork-wrapper svg');
+        svg.add(basicSvg.children());
+        svg.configure({viewBox: basicSvg[0].getAttribute('viewBox')}, true);
+        $('#create-board #patchwork-wrapper svg').remove();
+        $('#create-board #patchwork-wrapper').append(svg.root());
+    }});
+});
+
 $('#patch-list svg').click(function(e) {
     activeFabric = undefined;
     $('#create-board, #save-patchwork').show();
@@ -22,7 +28,7 @@ $('#patch-list svg').click(function(e) {
     $(this).addClass("current");
     currentPatch = $(this).find('.main-group');
 });
-$('#create-board #patchwork-wrapper svg ').on('click', 'g', function(e){
+$('#create-board #patchwork-wrapper').on('click', 'svg g', function(e){
     e.stopPropagation();
     if (currentPatch !== undefined) {
         var patch = currentPatch.clone().removeClass('current');
@@ -115,7 +121,7 @@ $(document).on('click', '#fabric-list .fabric:not(.new)', function(e){
     }
 });
 
-$('#create-board #patchwork-wrapper svg ').on('click', 'polygon', function(){
+$('#create-board #patchwork-wrapper').on('click', 'svg polygon', function(){
     if (activeFabric !== undefined){
         $(this).attr('fill', activeFabric.color);
         $(this).attr('fabric-id', activeFabric.id);
