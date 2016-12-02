@@ -5,8 +5,8 @@
     </ul>
     <div id="patch-list">
         @include('patches.basics')
-        <!-- @include('patches.triangles') -->
-        <!-- @include('patches.rectangles') -->
+        @include('patches.triangles')
+        @include('patches.rectangles')
     </div>
     <div id="fabric-list">
         @foreach( $fabrics as $fabric)

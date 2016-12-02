@@ -2,7 +2,7 @@
      xmlns="http://www.w3.org/2000/svg"
      xmlns="http://www.w3.org/1999/xlink"
      version="1.1"
-     height="0">
+     >
 </svg>
 <div>
     <div id="add-row-top">
@@ -21,11 +21,12 @@
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns="http://www.w3.org/1999/xlink"
                 version="1.1"
-                viewBox="0 0 200 200">
-                <g transform="translate(0,0)">  <rect width="100" height="100"/></g>
-                <g transform="translate(100,0)"><rect width="100" height="100"/></g>
-                <g transform="translate(0,100)"><rect width="100" height="100"/></g>
-                <g transform="translate(100,100)"><rect width="100" height="100"/></g>
+                viewBox="0 0 200 200"
+                >
+                <g x="0" y="0" transform="translate(0,0)">  <rect width="100" height="100"/></g>
+                <g x="1" y="0" transform="translate(100,0)"><rect width="100" height="100"/></g>
+                <g x="0" y="1" transform="translate(0,100)"><rect width="100" height="100"/></g>
+                <g x="1" y="1" transform="translate(100,100)"><rect width="100" height="100"/></g>
             </svg>
             <?php
         }

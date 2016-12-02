@@ -3,48 +3,23 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/1999/xlink"
         version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group">
-        <g>
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
         </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
         </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
         </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
-        </g>
-    </g>
-    </svg>
-
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns="http://www.w3.org/1999/xlink"
-        version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group" >
-        <g>
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
-        </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
-        </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 0,50 50,0" class="second"/>
-            <polygon points="0,50 50,50 50,0" class="first"/>
-        </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 0,50 50,0" class="second"/>
-            <polygon points="0,50 50,50 50,0" class="first"/>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
         </g>
     </g>
     </svg>
@@ -53,48 +28,23 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/1999/xlink"
         version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group" >
-        <g>
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
         </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
         </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 0,50 50,0" class="second"/>
-            <polygon points="0,50 50,50 50,0" class="first"/>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 0,100 100,0" class="second"/>
+            <polygon points="0,100 100,100 100,0" class="first"/>
         </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 50,50 50,0" class="second"/>
-            <polygon points="0,0 50,50 0,50" class="first"/>
-        </g>
-    </g>
-    </svg>
-
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns="http://www.w3.org/1999/xlink"
-        version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group">
-        <g>
-            <polygon points="0,0 50,50 50,0" class="second"/>
-            <polygon points="0,0 50,50 0,50" class="first"/>
-        </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
-        </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 0,50 50,0" class="second"/>
-            <polygon points="0,50 50,50 50,0" class="first"/>
-        </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 0,100 100,0" class="second"/>
+            <polygon points="0,100 100,100 100,0" class="first"/>
         </g>
     </g>
     </svg>
@@ -103,48 +53,23 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/1999/xlink"
         version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group" >
-        <g>
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
         </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
         </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 50,50 50,0" class="second"/>
-            <polygon points="0,0 50,50 0,50" class="first"/>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 0,100 100,0" class="second"/>
+            <polygon points="0,100 100,100 100,0" class="first"/>
         </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 0,50 50,0" class="second"/>
-            <polygon points="0,50 50,50 50,0" class="first"/>
-        </g>
-    </g>
-    </svg>
-
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns="http://www.w3.org/1999/xlink"
-        version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group" >
-        <g>
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
-        </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
-        </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
-        </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 100,100 100,0" class="second"/>
+            <polygon points="0,0 100,100 0,100" class="first"/>
         </g>
     </g>
     </svg>
@@ -153,23 +78,23 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/1999/xlink"
         version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group" >
-        <g>
-            <polygon points="0,0 0,50 50,0" class="first"/>
-            <polygon points="0,50 50,50 50,0" class="second"/>
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 100,100 100,0" class="second"/>
+            <polygon points="0,0 100,100 0,100" class="first"/>
         </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 0,50 50,0" class="second"/>
-            <polygon points="0,50 50,50 50,0" class="first"/>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
         </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 50,50 50,0" class="second"/>
-            <polygon points="0,0 50,50 0,50" class="first"/>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 0,100 100,0" class="second"/>
+            <polygon points="0,100 100,100 100,0" class="first"/>
         </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
         </g>
     </g>
     </svg>
@@ -178,23 +103,98 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/1999/xlink"
         version="1.1"
-        viewBox="0 0 100 100">
-    <g class="main-group" >
-        <g>
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="first"/>
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
         </g>
-        <g transform="translate(50,0)">
-            <polygon points="0,0 50,50 50,0" class="second"/>
-            <polygon points="0,0 50,50 0,50" class="first"/>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
         </g>
-        <g transform="translate(0,50)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="second"/>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 100,100 100,0" class="second"/>
+            <polygon points="0,0 100,100 0,100" class="first"/>
         </g>
-        <g transform="translate(50,50)">
-            <polygon points="0,0 50,50 50,0" class="first"/>
-            <polygon points="0,0 50,50 0,50" class="first"/>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 0,100 100,0" class="second"/>
+            <polygon points="0,100 100,100 100,0" class="first"/>
+        </g>
+    </g>
+    </svg>
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/1999/xlink"
+        version="1.1"
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
+        </g>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
+        </g>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
+        </g>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
+        </g>
+    </g>
+    </svg>
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/1999/xlink"
+        version="1.1"
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 0,100 100,0" class="first"/>
+            <polygon points="0,100 100,100 100,0" class="second"/>
+        </g>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 0,100 100,0" class="second"/>
+            <polygon points="0,100 100,100 100,0" class="first"/>
+        </g>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 100,100 100,0" class="second"/>
+            <polygon points="0,0 100,100 0,100" class="first"/>
+        </g>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
+        </g>
+    </g>
+    </svg>
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/1999/xlink"
+        version="1.1"
+        viewBox="0 0 200 200">
+    <g class="main-group comboPatch">
+        <g x="0" y="0">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="first"/>
+        </g>
+        <g x="1" y="0" transform="translate(100,0)">
+            <polygon points="0,0 100,100 100,0" class="second"/>
+            <polygon points="0,0 100,100 0,100" class="first"/>
+        </g>
+        <g x="0" y="1" transform="translate(0,100)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="second"/>
+        </g>
+        <g x="1" y="1" transform="translate(100,100)">
+            <polygon points="0,0 100,100 100,0" class="first"/>
+            <polygon points="0,0 100,100 0,100" class="first"/>
         </g>
     </g>
     </svg>

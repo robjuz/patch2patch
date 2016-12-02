@@ -5,9 +5,7 @@
         version="1.1"
         viewBox="0 0 100 100">
     <g class="main-group">
-        <g>
             <polygon points="0,0 0,100 100,100 100,0" class="first"/>
-        </g>
     </g>
     </svg>
 
