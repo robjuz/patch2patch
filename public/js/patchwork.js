@@ -1,4 +1,4 @@
-$('#tabs').tabs();
+$('.tabs').tabs();
 
 /**
  * Positioning patches
@@ -22,29 +22,37 @@ $(document).ready(function () {
             patchworkSvg = svg;
             patchwork = $(svg.root());
             viewBox = patchwork[0].viewBox.baseVal;
-        }
-    });
 
-    patchwork.on('click', '>g', function (e) {
-        e.stopPropagation();
-        if (currentPatch !== undefined) {
-            var patch = currentPatch.clone();
-            patch.find('polygon').removeAttr('class').attr('fill', '#FFF');
+            patchwork.on('click', '>g', function (e) {
+                e.stopPropagation();
+                if (currentPatch !== undefined) {
+                    var patch = currentPatch.clone();
+                    patch.find('polygon').removeAttr('class').attr('fill', '#FFF');
 
-            if (patch.hasClass('comboPatch')) {
-                var initX = parseInt($(this).attr('x'), 10);
-                var initY = parseInt($(this).attr('y'), 10);
-                patch.find('g').each(function () {
-                    var x = parseInt($(this).attr('x'), 10) + initX;
-                    var y = parseInt($(this).attr('y'), 10) + initY;
-                    patchwork.find('g[x=' + x + '][y=' + y + ']').html($(this).find('polygon'));
-                });
-            } else {
-                $(this).html(patch.children());
-            }
+                    if (patch.hasClass('comboPatch')) {
+                        var initX = parseInt($(this).attr('x'), 10);
+                        var initY = parseInt($(this).attr('y'), 10);
+                        patch.find('g').each(function () {
+                            var x = parseInt($(this).attr('x'), 10) + initX;
+                            var y = parseInt($(this).attr('y'), 10) + initY;
+                            patchwork.find('g[x=' + x + '][y=' + y + ']').html($(this).find('polygon'));
+                        });
+                    } else {
+                        $(this).html(patch.children());
+                    }
+                }
+            });
+
+            patchwork.on('click', 'polygon', function () {
+                if (activeFabric !== undefined) {
+                    $(this).attr('fill', activeFabric.color);
+                    $(this).attr('fabric-id', activeFabric.id);
+                }
+            });
         }
     });
 });
+
 
 $('#patch-list svg').click(function (e) {
     e.stopPropagation();
@@ -147,13 +155,6 @@ $(document).on('click', '#fabric-list .fabric:not(.new)', function (e) {
             color: fabricThumbnail.css('background-color'),
             id: pattern.data('id')
         };
-    }
-});
-
-$('#create-board #patchwork-wrapper').on('click', 'svg polygon', function () {
-    if (activeFabric !== undefined) {
-        $(this).attr('fill', activeFabric.color);
-        $(this).attr('fabric-id', activeFabric.id);
     }
 });
 

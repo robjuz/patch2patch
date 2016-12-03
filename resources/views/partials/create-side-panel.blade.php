@@ -1,12 +1,23 @@
-<div id="tabs">
+<div id="tabs" class="tabs">
     <ul>
         <li><a href="#patch-list">Łatki</a></li>
         <li><a href="#fabric-list">Materiały</a></li>
     </ul>
-    <div id="patch-list">
-        @include('patches.basics')
-        @include('patches.triangles')
-        @include('patches.rectangles')
+    <div id="patch-list" class="tabs tabs-vertical">
+        <ul>
+            <li><a href="#patch-list-basic">Podstawowe</a></li>
+            <li><a href="#patch-list-rectangles">Kwadraty</a></li>
+            <li><a href="#patch-list-triangles">Trójkąty</a></li>
+        </ul>
+        <div id="patch-list-basic">
+            @include('patches.basics')
+        </div>
+        <div id="patch-list-rectangles">
+            @include('patches.rectangles')
+        </div>
+        <div id="patch-list-triangles">
+            @include('patches.triangles')
+        </div>
     </div>
     <div id="fabric-list">
         @foreach( $fabrics as $fabric)

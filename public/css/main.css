@@ -197,12 +197,36 @@ footer span{
     font-weight: bold;
 }
 
+#patch-list {
+	padding-left: 0;
+}
+
+#patch-list ul {
+	margin-left: -62px;
+}
+
+.tabs-vertical .ui-tabs-nav {
+	width:100%;
+	position:fixed;
+	-webkit-transform-origin: left top;
+	-webkit-transform:rotate(-90deg) translateX(-100%);
+}
+#tabs .tabs-vertical ul li {
+	margin-right:20px;
+	float:right;
+	height:100%;
+}
+.tabs-vertical .ui-tabs-panel {
+	float: right;
+}
+
 #tabs ul li:hover{
 	background-color: #fafac2;
 	border-color: #733;
 }
 
-#fabric-list, #patch-list{
+#fabric-list,
+#patch-list.ui-widget.ui-widget-content {
 	clear: both;
 	width: 100%;
 	height: 85vh;
@@ -470,4 +494,14 @@ h1{
 
 .pull-left {
 	float: left;
+}
+
+#gallery svg {
+	stroke: black;
+}
+#gallery polygon {
+	stroke: none;
+}
+#gallery rect {
+	fill: transparent;
 }
