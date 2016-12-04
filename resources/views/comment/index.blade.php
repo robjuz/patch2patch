@@ -9,7 +9,9 @@
         <hr>
     @endforeach
 
-    {{ $comments->links() }}
+    <div class="text-center">
+        {{ $comments->links() }}
+    </div>
 
     <h3>Zostaw nam swój komentarz</h3>
     <form method="POST" action="{{ route('comment.store') }}">

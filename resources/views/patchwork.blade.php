@@ -52,7 +52,10 @@
 		<hr>
 	@endforeach
 
-    {{ $comments->fragment('comments')->links() }}
+    <div class="text-center">
+        {{ $comments->fragment('comments')->links() }}
+    </div>
+
 
 	<h3>Zostaw nam swój komentarz</h3>
 	<form method="POST" action="{{ route('comment.store') }}">
