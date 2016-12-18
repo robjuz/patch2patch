@@ -6,10 +6,10 @@
 </svg>
 <div>
     <div id="add-row-top">
-        <button type="button">Dodaj wiersz</button>
+        <button id="add-row-top" type="button" class="btn">Dodaj wiersz</button>
     </div>
     <div id="add-column-left">
-        <button type="button">Dodaj kolumnę</button>
+        <button type="button" class="btn">Dodaj kolumnę</button>
     </div>
     <div id="patchwork-wrapper">
         <?php
@@ -33,10 +33,10 @@
         ?>
     </div>
     <div id="add-column-right">
-        <button type="button">Dodaj kolumnę</button>
+        <button type="button" class="btn">Dodaj kolumnę</button>
     </div>
     <div id="add-row-bottom">
-        <button type="button">Dodaj wiersz</button>
+        <button type="button" class="btn">Dodaj wiersz</button>
     </div>
 </div>
 
