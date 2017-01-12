@@ -6,15 +6,15 @@
     <div id="patch-list" class="tabs tabs-vertical">
         <ul>
             <li><a href="#patch-list-basic">Podstawowe</a></li>
-            <li><a href="#patch-list-rectangles">Kwadraty</a></li>
-            <li><a href="#patch-list-triangles">Trójkąty</a></li>
+            <!--<li><a href="#patch-list-rectangles">Kwadraty</a></li>-->
+            <li><a href="#patch-list-triangles">Złożone</a></li>
         </ul>
         <div id="patch-list-basic">
             @include('patches.basics')
         </div>
-        <div id="patch-list-rectangles">
+        <!--<div id="patch-list-rectangles">
             @include('patches.rectangles')
-        </div>
+        </div>-->
         <div id="patch-list-triangles">
             @include('patches.triangles')
         </div>
@@ -39,22 +39,22 @@
         <hr>
         <div class="fabric new">
             <div id="add-fabric">
-                <div>?</div>
-                <span>Dodaj nowy materiał!</span>
+                <div class="fabric-thumbnail">?</div>
+                <span class="fabric-color">Dodaj nowy materiał!</span>
             </div>
             <form enctype="multipart/form-data" id="save-fabric-form" action="/api/fabric" type="POST">
                 <div class="form-group">
                     <label for="title">Nazwa</label>
                     <input type="text" name="title"/>
                 </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <input type="file" name="image" />
-                </div>
+                </div>-->
                 <div class="form-group">
                     <label for="title">Kolor</label>
                     <input type="color" name="color"/>
                 </div>
-                <button type="submit" class="btn pull-right"> Dodaj </button>
+                <button type="submit"> Dodaj </button>
             </form>
         </div>
     </div>

@@ -4,11 +4,11 @@
      version="1.1"
      >
 </svg>
-<div>
-    <div id="add-row-top">
+<div id="create-board-content">
+    <div id="add-row-top" class="extend-patchwork">
         <button id="add-row-top" type="button" class="btn">Dodaj wiersz</button>
     </div>
-    <div id="add-column-left">
+    <div id="add-column-left" class="extend-patchwork">
         <button type="button" class="btn">Dodaj kolumnę</button>
     </div>
     <div id="patchwork-wrapper">
@@ -32,13 +32,13 @@
         }
         ?>
     </div>
-    <div id="add-column-right">
+    <div id="add-column-right" class="extend-patchwork">
         <button type="button" class="btn">Dodaj kolumnę</button>
     </div>
-    <div id="add-row-bottom">
+    <div id="add-row-bottom" class="extend-patchwork">
         <button type="button" class="btn">Dodaj wiersz</button>
     </div>
 </div>
 
-<button id="preview-button" type="button" class="btn pull-left">Podgląd</button>
-<button id="save-patchwork" class="btn pull-right">Zapisz</button>
+<button id="preview-button">Podgląd</button>
+<button id="save-patchwork">Zapisz</button>
