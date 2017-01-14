@@ -65,6 +65,7 @@ header{
 	top: 0;
 	width: 100%;
 	z-index: 100;
+    transition: 1s;
 }
 
 header #header-content{
@@ -77,8 +78,14 @@ header #logo{
 	padding: 10px;
 }
 
+header svg.logo{
+    width: auto;
+    transition: 1s;
+}
+
 header menu{
 	float: right;
+    transition: 1s;
 }
 
 header menu .menuitem{
@@ -143,10 +150,27 @@ header menu a{
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
+    transition: 1s;
 }
 
 header menu .menuitem:hover{
 	color: #ffffe6;
+}
+
+header.compact{
+    height: 60px;
+}
+
+header.compact svg.logo{
+    height: 42px;
+}
+
+header.compact menu{
+    margin-top: 12px;
+}
+
+header.compact menu a{
+    padding: 9px;
 }
 
 /********** CREATING ***********/
@@ -612,5 +636,3 @@ footer{
 	float: right;
 	font-size: 13px;
 }
-
-#

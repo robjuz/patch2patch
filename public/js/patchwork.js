@@ -258,3 +258,11 @@ function showSpinner() {
 function hideSpinner() {
     $("#loading-gears-wrapper").hide();
 }
+
+$(window).scroll(function () {
+    if($(document).scrollTop() > 50) {
+        $('header').addClass('compact');
+    } else {
+        $('header').removeClass('compact');
+    }
+});
