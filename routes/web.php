@@ -12,12 +12,16 @@
 |
 */
 
-Route::get('/', 'PatchworkController@create');
+Route::get('/', function() {
+  return view('homepage');
+});
 
-Route::resource('patchwork', 'PatchworkController', ['except' => [
-    'create'
-]]);
+Route::resource('patchwork', 'PatchworkController');
 
 Route::resource('comment', 'CommentController', ['only' => [
     'index', 'store',
 ]]);
+
+Route::get('/about-us', function(){
+  return view('about-us');
+})->name('about-us');

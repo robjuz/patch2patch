@@ -1,18 +1,18 @@
 @extends('index')
 
 @section('content')
-<div id='details'>
-	<h1 class="title">
+<div id="details">
+	<h1>
 		{{ $patchwork->title or 'Patchwork '.$patchwork->id }}
 	</h1>
 	<div class="date">
 		dodano: <span>{{ $patchwork->created_at->format('d.m.Y') }}</span>
 	</div>
-	<div id="main-panel">
+	<div id="preview">
 		<?= $patchwork->content ?>
 	</div>
 
-	<div id="side-panel">
+	<div id="fabric-list">
 		<h2>Materiały:</h2>
         @foreach( $patchwork->fabrics as $fabric)
             <div class="fabric">
@@ -52,7 +52,7 @@
 		<hr>
 	@endforeach
 
-    <div class="text-center">
+    <div>
         {{ $comments->fragment('comments')->links() }}
     </div>
 
@@ -66,7 +66,7 @@
 		</div>
 		<div class="form-group">
 			<label>Twój komentarz</label>
-			<textarea name="text" rows="5" style="resize: vertical" required></textarea>
+			<textarea name="text" rows="5" required></textarea>
 		</div>
 		<input type="submit" />
 	</form>

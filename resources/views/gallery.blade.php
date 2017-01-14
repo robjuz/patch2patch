@@ -3,11 +3,9 @@
 @section('content')
 <div id="gallery">
 	<h1>Galeryjka</h1>
-	@foreach( $patchworks->chunk(6) as $chunk )
+	@foreach( $patchworks->chunk($patchworks->count() / 4) as $chunk )
 		<div class="column">
-		@foreach($chunk as $patchwork)	
-			@include('partials.single-patchwork')
-		@endforeach
+			@each('partials.single-patchwork', $chunk, 'patchwork')
 		</div>
 	@endforeach
 	<svg height="0">
@@ -20,5 +18,9 @@
 			</defs>
 		@endforeach
 	</svg>
+	<div id="pagination">
+		{{ $patchworks->links() }}
+	</div>
 </div>
+
 @endsection()
