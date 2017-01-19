@@ -2,10 +2,9 @@
 
 @section('content')
 <div id="homepage">
-  <h1>Witamy w @include('partials.logo')</h1>
+  <h1>@lang('translations.welcome_to') @include('partials.logo')</h1>
   <h2>
-    Przedstawiamy Ci interaktywne narzędzie do projektowania patchworków.<br>
-    Baw się dobrze :)
+    @lang('translations.welcome_message')
   </h2>
 </div>
 @endsection()

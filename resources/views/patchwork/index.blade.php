@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="gallery">
-	<h1>Galeryjka</h1>
+	<h1>@lang('translations.gallery')</h1>
 	@foreach( $patchworks->chunk(ceil($patchworks->count() / 4)) as $chunk )
 		<div class="column">
 			@each('partials.single-patchwork', $chunk, 'patchwork')

@@ -3,9 +3,7 @@
 @section('content')
 <div id="create">
 	<div id="welcome">
-		Tutaj będzie Twój patchwork! <br>
-		Najpierw wybierz z jakich elementów ma się składać <br>
-		<span>→</span>
+		@lang('translations.create_welcome_message')
 	</div>
 	
 	<div id="create-board">

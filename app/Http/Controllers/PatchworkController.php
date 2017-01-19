@@ -17,7 +17,7 @@ class PatchworkController extends Controller
     {
         $patchworks = Patchwork::withCount('comments')->paginate('16');
         $fabrics = Fabric::get();
-        return view('gallery',compact(['patchworks', 'fabrics']));
+        return view('patchwork.index',compact(['patchworks', 'fabrics']));
 
     }
 
@@ -28,7 +28,7 @@ class PatchworkController extends Controller
      */
     public function create()
     {
-        return view('create')->with('fabrics', Fabric::get());
+        return view('patchwork.create')->with('fabrics', Fabric::get());
     }
 
     /**
@@ -53,7 +53,7 @@ class PatchworkController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Patchwork  $patchwork
      * @return \Illuminate\Http\Response
      */
     public function show(Patchwork $patchwork)
@@ -61,13 +61,13 @@ class PatchworkController extends Controller
 		$patchwork->views++;
 		$patchwork->save();
 		$comments = $patchwork->comments()->orderBy('created_at', 'desc')->paginate(10);
-        return view('patchwork',compact('patchwork', 'comments'));
+        return view('patchwork.show',compact('patchwork', 'comments'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Patchwork $patchwork
      * @return \Illuminate\Http\Response
      */
     public function edit(Patchwork $patchwork)
@@ -80,7 +80,7 @@ class PatchworkController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Patchwork $patchwork
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Patchwork $patchwork)
@@ -98,7 +98,7 @@ class PatchworkController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Patchwork $patchwork
      * @return \Illuminate\Http\Response
      */
     public function destroy(Patchwork $patchwork)

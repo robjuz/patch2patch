@@ -10,6 +10,8 @@ class Comment extends Model
 
     protected $fillable = ['text', 'created_by', 'patchwork_id'];
 
+    protected $dates = ['created_at', 'updated_at'];
+
     public function patchwork()
     {
         return $this->belongsTo('App\Patchwork');

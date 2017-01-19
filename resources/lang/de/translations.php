@@ -1,6 +1,7 @@
 <?php
 
 return array (
+  'date_format' => 'd.m.Y \u\m H:i',
   'create' => 'Entwerfen',
   'gallery' => 'Galerie',
   'guest_book' => 'Gästebuch',
