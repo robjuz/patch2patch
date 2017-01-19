@@ -54,7 +54,7 @@
                     <label for="color">@lang('translations.color')</label>
                     <input type="color" name="color"/>
                 </div>
-                <button type="submit"> @lang('translations.add) </button>
+                <button type="submit"> @lang('translations.add') </button>
             </form>
         </div>
     </div>

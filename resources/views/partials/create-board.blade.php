@@ -6,7 +6,7 @@
 </svg>
 <div id="create-board-content">
     <div id="add-row-top" class="extend-patchwork">
-        <button id="add-row-top" type="button" class="btn"@lang('translations.add_row')</button>
+        <button id="add-row-top" type="button" class="btn">@lang('translations.add_row')</button>
     </div>
     <div id="add-column-left" class="extend-patchwork">
         <button type="button" class="btn">@lang('translations.add_column')</button>
@@ -40,4 +40,4 @@
 </div>
 
 <button id="preview-button">@lang('translations.preview')</button>
-<button id="save-patchwork">@lang('translations.save)</button>
+<button id="save-patchwork">@lang('translations.save')</button>
