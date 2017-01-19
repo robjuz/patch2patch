@@ -6,15 +6,14 @@
 </svg>
 <div id="create-board-content">
     <div id="add-row-top" class="extend-patchwork">
-        <button id="add-row-top" type="button" class="btn">Dodaj wiersz</button>
+        <button id="add-row-top" type="button" class="btn"@lang('translations.add_row')</button>
     </div>
     <div id="add-column-left" class="extend-patchwork">
-        <button type="button" class="btn">Dodaj kolumnę</button>
+        <button type="button" class="btn">@lang('translations.add_column')</button>
     </div>
     <div id="patchwork-wrapper">
         <?php
-        if (isset($patchwork)) { ?>
-        <?php
+        if (isset($patchwork)) {
             echo $patchwork->content;
         } else { ?>
             <svg
@@ -33,12 +32,12 @@
         ?>
     </div>
     <div id="add-column-right" class="extend-patchwork">
-        <button type="button" class="btn">Dodaj kolumnę</button>
+        <button type="button" class="btn">@lang('translations.add_column)</button>
     </div>
     <div id="add-row-bottom" class="extend-patchwork">
-        <button type="button" class="btn">Dodaj wiersz</button>
+        <button type="button" class="btn">@lang('translations.add_row')</button>
     </div>
 </div>
 
-<button id="preview-button">Podgląd</button>
-<button id="save-patchwork">Zapisz</button>
+<button id="preview-button">@lang('translations.preview')</button>
+<button id="save-patchwork">@lang('translations.save)</button>
