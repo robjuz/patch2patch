@@ -234,13 +234,13 @@ $('#save-patchwork-form').submit(function (e) {
 });
 
 $('#preview-button').click(function () {
-    $('#create-board').hide();
+    var createBoard = $('#create-board');
     $('#patchwork-wrapper').dialog(
         {
             'width': 0.8 * $(window).width(),
             'height': 0.8 * $(window).height(),
             // 'left': '0px',
-            // 'top':'0px',
+             'top':'0px',
             dialogClass: "preview",
             title: 'Podgląd',
             // resizable: false,

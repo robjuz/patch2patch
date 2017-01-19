@@ -47,9 +47,16 @@
 
 	<h2 id="comments"> Wasze komentarze </h2>
 	@foreach($comments as $comment)
-		<p> {{ $comment->created_at }} : {{ $comment->created_by or '' }}</p>
-		<p> {{ $comment->text or '' }}</p>
-		<hr>
+		<div class="comment">
+			<p>
+				<span class="author">{{ $comment->created_by or '' }}</span>
+				<span class="date">{{ date('d.m.Y \o H:i', strtotime($comment->created_at)) }}</span>
+			</p>
+			<p class="text">
+				{{ $comment->text or '' }}
+			</p>
+			<hr>
+		</div>
 	@endforeach
 
     <div>
@@ -57,18 +64,19 @@
     </div>
 
 
-	<h3>Zostaw nam swój komentarz</h3>
-	<form method="POST" action="{{ route('comment.store') }}">
-		<input name="patchwork_id" type="hidden" value="{{ $patchwork->id }}" />
-		<div class="form-group">
-			<label>Twoje imię</label>
-			<input type="text" name="created_by" required/>
-		</div>
-		<div class="form-group">
-			<label>Twój komentarz</label>
-			<textarea name="text" rows="5" required></textarea>
-		</div>
-		<input type="submit" />
-	</form>
+		<div id="new-comment">
+      <h3>Zostaw nam swój komentarz</h3>
+      <form method="POST" action="{{ route('comment.store') }}">
+          <div class="form-group">
+              <label>Twoje imię</label>
+              <input type="text" name="created_by" required/>
+          </div>
+          <div class="form-group">
+              <label>Twój komentarz</label>
+              <textarea name="text" rows="5" style="resize: vertical" required></textarea>
+          </div>
+          <button type="submit"> Zapisz </button>
+      </form>
+    </div>
 </div>
 @endsection()
