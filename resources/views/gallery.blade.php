@@ -3,7 +3,7 @@
 @section('content')
 <div id="gallery">
 	<h1>Galeryjka</h1>
-	@foreach( $patchworks->chunk($patchworks->count() / 4) as $chunk )
+	@foreach( $patchworks->chunk(ceil($patchworks->count() / 4)) as $chunk )
 		<div class="column">
 			@each('partials.single-patchwork', $chunk, 'patchwork')
 		</div>

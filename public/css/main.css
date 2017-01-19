@@ -65,7 +65,7 @@ header{
 	top: 0;
 	width: 100%;
 	z-index: 100;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 header #header-content{
@@ -80,12 +80,12 @@ header #logo{
 
 header svg.logo{
     width: auto;
-    transition: 1s;
+	transition: 0.5s;
 }
 
 header menu{
 	float: right;
-    transition: 1s;
+	transition: 0.5s;
 }
 
 header menu .menuitem{
@@ -150,7 +150,7 @@ header menu a{
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
-    transition: 1s;
+	transition: 0.5s;
 }
 
 header menu .menuitem:hover{

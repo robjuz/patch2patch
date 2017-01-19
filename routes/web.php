@@ -11,17 +11,22 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
+], function() {
 
-Route::get('/', function() {
-  return view('homepage');
+    Route::get('/', function () {
+        return view('homepage');
+    });
+
+    Route::resource('patchwork', 'PatchworkController');
+
+    Route::resource('comment', 'CommentController', ['only' => [
+        'index', 'store',
+    ]]);
+
+    Route::get('/about-us', function () {
+        return view('about-us');
+    })->name('about-us');
 });
-
-Route::resource('patchwork', 'PatchworkController');
-
-Route::resource('comment', 'CommentController', ['only' => [
-    'index', 'store',
-]]);
-
-Route::get('/about-us', function(){
-  return view('about-us');
-})->name('about-us');

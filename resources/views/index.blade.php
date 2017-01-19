@@ -40,16 +40,16 @@
 			</div>
 			<menu>
 				<a class="menuitem active" href="{{ route('patchwork.create')}}">
-					Projektowanie
+					@lang('translations.create')
 				</a>
 				<a class="menuitem" href="{{ route('patchwork.index') }}">
-					Galeria
+					@lang('translations.gallery')
 				</a>
 				<a class="menuitem" href="{{ route('comment.index') }}">
-					Księga gości
+					@lang('translations.guest_book')
 				</a>
 				<a class="menuitem" href="{{ route('about-us')}}">
-					Twórcy
+					@lang('translations.authors')
 				</a>
 			</menu>
 		</div>
