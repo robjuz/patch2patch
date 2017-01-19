@@ -32,7 +32,7 @@
         ?>
     </div>
     <div id="add-column-right" class="extend-patchwork">
-        <button type="button" class="btn">@lang('translations.add_column)</button>
+        <button type="button" class="btn">@lang('translations.add_column')</button>
     </div>
     <div id="add-row-bottom" class="extend-patchwork">
         <button type="button" class="btn">@lang('translations.add_row')</button>
