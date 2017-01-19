@@ -210,10 +210,10 @@ header.compact menu a{
 
 #patchwork-wrapper{
 	float: left;
+	height: 600px;
 	margin: 3px 30px;
-	max-height: 600px;
-	max-width: 790px;
 	overflow: scroll;
+	width: 790px;
 }
 
 #patchwork-wrapper svg rect{
@@ -416,7 +416,7 @@ header.compact menu a{
 	color: #4d1300;
 	height: 40px;
 	position: relative;
-	width: 300px;
+	width: 100%;
 }
 
 .ui-dialog-titlebar span{
@@ -449,25 +449,27 @@ header.compact menu a{
 	width: 270px !important;
 }
 
-.ui-dialog form .form-group{
+/********** FORMS ***********/
+
+form .form-group{
 	clear: left;
 	margin-bottom: 10px;
 }
 
-.ui-dialog form label{
+form label{
 	float: left;
 	font-size: 14px;
 	width: 80px;
 }
 
-.ui-dialog form input, .ui-dialog form textarea{
+form input, form textarea{
 	background-color: #fff;
 	border: 1px solid #000;
 	cursor: pointer;
 	width: 185px;
 }
 
-.ui-dialog form textarea{
+form textarea{
 	resize: vertical;
 }
 
@@ -494,7 +496,68 @@ footer{
 #loading-gears-wrapper{
 	display: none;
 }
+/*
+#loading-gears-wrapper{
+	background-color: #000;
+	height: 100%;
+	opacity: 0.4;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
 
+#loading-gears{
+	height: 200px;
+	margin: 50px auto;
+	width: 400px;
+}
+
+#loading-gears .patch{
+	transform-origin: 100px 100px;
+}
+
+#loading-gears .stitch{
+
+}
+
+@keyframes move-up{
+	from { transform: translate(100px, 150px); }
+	to   { transform: translate(100px, 100px); }
+}
+
+@keyframes rotate{
+	from { transform: rotate(180deg);  }
+	to   { transform: rotate(90deg); }
+}
+
+@keyframes move-left-first-patch{
+	from { transform: translateX(0); }
+	to	 { transform: translateX(-100px); }
+}
+
+@keyframes move-left-second-patch{
+	from { transform: translateX(100px); }
+	to   { transform: translateX(0); }
+}
+
+
+#loading-gears .first.patch{
+	animation:
+		move-left-first-patch 1s linear 2s 1 forwards,
+		move-up 1s linear 3s 1 forwards,
+  	rotate 1s linear 4s 1 forwards,
+		move-left-second-patch 1s linear 5s 1 forwards;
+}
+
+#loading-gears .second.patch{
+	displa: none;
+	animation:
+		move-up 1s linear 0s 1 forwards,
+		rotate 1s linear 1s 1 forwards,
+		move-left-second-patch 1s linear 2s 1 forwards,
+		move-left-first-patch 1s linear 5s 1 forwards;
+}
+*/
 /********** GALLERY ***********/
 
 #gallery .column{
@@ -553,6 +616,7 @@ footer{
 #pagination{
 	clear: both;
 	font-size: 20px;
+	padding: 20px 0;
 	text-align: center;
 }
 
@@ -626,7 +690,9 @@ footer{
 	color: #fff;
 }
 
-#pagination li:first-child, #pagination li:last-child{
+#pagination li:first-child, #pagination li:last-child,
+#pagination li:first-child:hover, #pagination li:last-child:hover{
+	background-color: transparent;
 	border-color: transparent;
 	color: #777;
 }
@@ -635,4 +701,58 @@ footer{
 #details .date{
 	float: right;
 	font-size: 13px;
+}
+
+/********** COMMENTS ***********/
+.comment .author{
+	font-size: 18px;
+}
+
+.comment .date{
+	font-size: 13px;
+	color: #bbb;
+}
+
+.comment .text{
+	padding-left: 10px;
+}
+
+.comment hr{
+	color: transparent;
+	height: 5px;
+}
+
+.comment:nth-child(6n) hr{
+	background-color: #f90;
+}
+.comment:nth-child(6n+1) hr{
+	background-color: #060;
+}
+.comment:nth-child(6n+2) hr{
+	background-color: #cc0;
+}
+.comment:nth-child(6n+3) hr{
+	 background-color: #0047b3;
+ }
+.comment:nth-child(6n+4) hr{
+	 background-color: #c30;
+ }
+.comment:nth-child(6n+5) hr{
+	background-color: #550080;
+}
+
+#new-comment{
+	margin-top: 30px;
+	width: 400px;
+}
+
+#new-comment form label{
+	width: auto;
+}
+
+#new-comment form input, #new-comment form textarea{
+	clear: both;
+	display: block;
+	padding: 5px 0;
+	width: 100%;
 }
