@@ -22,6 +22,7 @@ h1::first-letter{
 	color: #561010;
 	font-size: 200%;
 	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 main{
@@ -84,8 +85,9 @@ header svg.logo{
 }
 
 header menu{
-	float: right;
+	display: inline-block;
 	transition: 0.5s;
+	vertical-align: middle;
 }
 
 header menu .menuitem{
@@ -171,6 +173,15 @@ header.compact menu{
 
 header.compact menu a{
     padding: 9px;
+}
+
+header .language-switch{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.language-switch li {
+	display: inline-block;
 }
 
 /********** CREATING ***********/

@@ -15,6 +15,7 @@
 	<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <!--<link rel="stylesheet" href="/css/jquery-ui.min.css">-->
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/flag-icon.min.css">
 
 
 
@@ -52,6 +53,15 @@
 					@lang('translations.authors')
 				</a>
 			</menu>
+			<ul class="language-switch">
+				@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+					<li>
+						<a rel="alternate" hreflang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
+							<span class="flag-icon flag-icon-{{ $properties['regional'] }}"></span>
+						</a>
+					</li>
+				@endforeach
+			</ul>
 		</div>
 	</header>
 
