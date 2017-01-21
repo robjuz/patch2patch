@@ -85,9 +85,11 @@ header svg.logo{
 }
 
 header menu{
-	display: inline-block;
+	/*display: inline-block;*/
 	transition: 0.5s;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
+	float: right;
+	margin: 0;
 }
 
 header menu .menuitem{
@@ -160,28 +162,31 @@ header menu .menuitem:hover{
 }
 
 header.compact{
-    height: 60px;
+    height: 70px;
 }
 
 header.compact svg.logo{
-    height: 42px;
-}
-
-header.compact menu{
-    margin-top: 12px;
+    height: 47px;
 }
 
 header.compact menu a{
-    padding: 9px;
+    padding: 7px;
+}
+
+header .header-right{
+	float: right;
 }
 
 header .language-switch{
-	display: inline-block;
-	vertical-align: middle;
+	/*display: inline-block;*/
+	/*vertical-align: middle;*/
+	margin: 0;
 }
 
 .language-switch li {
 	display: inline-block;
+	float: right;
+	margin: 5px;
 }
 
 /********** CREATING ***********/

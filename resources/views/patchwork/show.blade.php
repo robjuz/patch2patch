@@ -72,10 +72,10 @@
               <input type="text" name="created_by" required/>
           </div>
           <div class="form-group">
-              <label>@lang('translations.your_comment)</label>
+              <label>@lang('translations.your_comment')</label>
               <textarea name="text" rows="5" style="resize: vertical" required></textarea>
           </div>
-          <button type="submit"> @lang('translations.save) </button>
+          <button type="submit"> @lang('translations.save') </button>
       </form>
     </div>
 </div>

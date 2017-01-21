@@ -39,29 +39,31 @@
 					@include('partials.logo')
 				</a>
 			</div>
-			<menu>
-				<a class="menuitem active" href="{{ route('patchwork.create')}}">
-					@lang('translations.create')
-				</a>
-				<a class="menuitem" href="{{ route('patchwork.index') }}">
-					@lang('translations.gallery')
-				</a>
-				<a class="menuitem" href="{{ route('comment.index') }}">
-					@lang('translations.guest_book')
-				</a>
-				<a class="menuitem" href="{{ route('about-us')}}">
-					@lang('translations.authors')
-				</a>
-			</menu>
-			<ul class="language-switch">
-				@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-					<li>
-						<a rel="alternate" hreflang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
-							<span class="flag-icon flag-icon-{{ $properties['regional'] }}"></span>
-						</a>
-					</li>
-				@endforeach
-			</ul>
+			<div class="header-right">
+				<ul class="language-switch">
+					@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+						<li>
+							<a rel="alternate" hreflang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
+								<span class="flag-icon flag-icon-{{ $properties['regional'] }}"></span>
+							</a>
+						</li>
+					@endforeach
+				</ul>
+				<menu>
+					<a class="menuitem active" href="{{ route('patchwork.create')}}">
+						@lang('translations.create')
+					</a>
+					<a class="menuitem" href="{{ route('patchwork.index') }}">
+						@lang('translations.gallery')
+					</a>
+					<a class="menuitem" href="{{ route('comment.index') }}">
+						@lang('translations.guest_book')
+					</a>
+					<a class="menuitem" href="{{ route('about-us')}}">
+						@lang('translations.authors')
+					</a>
+				</menu>
+			</div>
 		</div>
 	</header>
 
