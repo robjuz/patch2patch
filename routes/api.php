@@ -20,3 +20,5 @@ use Illuminate\Http\Request;
 Route::resource('fabric', 'FabricController', ['except' => [
     'create', 'edit'
 ]]);
+
+Route::post('update-language-files', 'ApiController@updateLanguageFiles');
