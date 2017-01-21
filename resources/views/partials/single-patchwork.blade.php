@@ -13,7 +13,7 @@
 		</div>
 	</a>
 	<div class="statistics">
-		<div class="views">@lang('translations.views', ['views' => $patchwork->views ?? 0])</div>
-		<div class="likes">@lang('translations.likes', ['likes' => $patchwork->likes ?? 0])</div>
+		<div class="views">@lang('translations.views', ['views' => $patchwork->views])</div>
+		<div class="likes">@lang('translations.likes', ['likes' => $patchwork->likes])</div>
 	</div>
 </div>
