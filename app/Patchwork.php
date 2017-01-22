@@ -18,4 +18,13 @@ class Patchwork extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    public function getSlugAttribute()
+    {
+        if (!empty($this->attributes['title'])) {
+            return '-'.str_slug($this->attributes['title']);
+        } else {
+            return '';
+        }
+    }
 }

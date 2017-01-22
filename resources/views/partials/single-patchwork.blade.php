@@ -1,13 +1,13 @@
 <div class="single-patchwork">
 	<div class="title">
-		<a href="{{ route('patchwork.show', $patchwork) }}">
+		<a href="{{ route('patchwork.show', [$patchwork, $patchwork->slug]) }}">
 			{{ $patchwork->title or 'Patchwork '.$patchwork->id }}
 		</a>
 	</div>
 	<div class="date">
 		@lang('translations.added'): <span>{{ $patchwork->created_at->format(trans('translations.date_format')) }}</span>
 	</div>
-	<a href="{{ route('patchwork.show', $patchwork) }}">
+	<a href="{{ route('patchwork.show', [$patchwork, $patchwork->slug]) }}">
 		<div class="preview-wrapper">
 			<?= $patchwork->content ?>
 		</div>

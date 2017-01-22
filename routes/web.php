@@ -20,7 +20,8 @@ Route::group([
         return view('homepage');
     });
 
-    Route::resource('patchwork', 'PatchworkController');
+    Route::resource('patchwork', 'PatchworkController', ['except' => 'show']);
+    Route::get('patchwork/{patchwork}{slug?}', 'PatchworkController@show')->name('patchwork.show');
 
     Route::resource('comment', 'CommentController', ['only' => [
         'index', 'store',
