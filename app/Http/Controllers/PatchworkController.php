@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use Illuminate\Http\Request;
 use App\Patchwork;
 use App\Fabric;
@@ -126,6 +127,12 @@ class PatchworkController extends Controller
         $patchwork->likes++;
         $patchwork->save();
         session()->push('likes', $patchwork->id);
+        return back();
+    }
+
+    public function comment(Request $request, Patchwork $patchwork)
+    {
+        $patchwork->comments()->save(new Comment($request->all()));
         return back();
     }
 }

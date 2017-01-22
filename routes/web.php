@@ -23,6 +23,7 @@ Route::group([
     Route::resource('patchwork', 'PatchworkController', ['except' => 'show']);
     Route::get('patchwork/{patchwork}{slug?}', 'PatchworkController@show')->name('patchwork.show');
     Route::post('patchwork/{patchwork}/like', 'PatchworkController@like')->name('patchwork.like');
+    Route::post('patchwork/{patchwork}/new-comment', 'PatchworkController@comment')->name('patchwork.comment');
 
     Route::resource('comment', 'CommentController', ['only' => [
         'index', 'store',
