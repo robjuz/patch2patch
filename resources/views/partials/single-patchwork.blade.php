@@ -13,7 +13,14 @@
 		</div>
 	</a>
 	<div class="statistics">
-		<div class="views">@lang('translations.views', ['views' => $patchwork->views])</div>
+		<div class="views">
+			@lang('translations.views', ['views' => $patchwork->views])
+			@if (!in_array($patchwork->id, session()->get('likes',[])))
+				<form class="like-form" action="{{ route('patchwork.like', $patchwork) }}" method="POST">
+					<button type="submit">Like</button>
+				</form>
+			@endif
+		</div>
 		<div class="likes">@lang('translations.likes', ['likes' => $patchwork->likes])</div>
 	</div>
 </div>

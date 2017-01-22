@@ -13,10 +13,24 @@ class PatchworkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $patchworks = Patchwork::withCount('comments')->paginate('16');
+        $search = $request->input('search','');
+        $order = explode(' ', $request->input('order',''));
+        $orderBy = $order[0] ?? '';
+        $orderDirection = $order[1] ?? 'DESC';
+
+        $patchworks = Patchwork::withCount('comments')
+            ->when(!empty($search), function ($query) use ($search) {
+              return $query->where('title', 'like', "%{$search}%");
+            })
+            ->when(!empty($orderBy), function ($query) use ($orderBy, $orderDirection) {
+                return $query->orderBy($orderBy, $orderDirection);
+            })
+            ->paginate('16');
         $fabrics = Fabric::get();
+
+        $request->flash();
         return view('patchwork.index',compact(['patchworks', 'fabrics']));
 
     }
@@ -105,5 +119,13 @@ class PatchworkController extends Controller
     {
         $patchwork->delete();
         return redirect()->action('PatchworkController@index');
+    }
+
+    public function like(Patchwork $patchwork)
+    {
+        $patchwork->likes++;
+        $patchwork->save();
+        session()->push('likes', $patchwork->id);
+        return back();
     }
 }
