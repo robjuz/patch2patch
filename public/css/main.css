@@ -301,28 +301,28 @@ header .language-switch{
 	list-style-type: none;
 	padding: 0;
 	position: absolute;
-	top: -59px;
+	top: -47px;
 }
 
 #tabs ul li{
-	background-color: #fffae6;
-	border: 2px dashed #cc5200;
 	float: left;
 	margin-right: 5px;
-	padding: 10px;
 }
 
-#tabs ul li.ui-tabs-active{
+#tabs ul li.ui-tabs-active a{
 	background-color: #fff0b3;
 }
 
-#tabs ul li:hover{
+#tabs ul li:hover a{
 	background-color: #ffe066;
 }
 
 
 #tabs ul li a{
+	background-color: #fffae6;
+	border: 2px dashed #cc5200;
 	color: #4d1300;
+	padding: 10px;
 	text-decoration: none;
 	text-transform: capitalize;
 }
@@ -350,25 +350,23 @@ header .language-switch{
 }
 
 #patch-list ul{
+	padding: 15px 7px;
 	position: relative;
 	top: -10px;
 }
 
-#patch-list ul li{
+#patch-list ul li a{
 	background-color: #eee;
 	border: 1px solid transparent;
-}
-
-#patch-list ul li a{
 	color: #333;
 }
 
-#patch-list ul li.ui-tabs-active{
+#patch-list ul li.ui-tabs-active a{
 	background-color: #fafafa;
 	border-color: #e1e1e1;
 }
 
-#patch-list ul li:hover{
+#patch-list ul li:hover a{
 	background-color: #dfdfdf;
 	border-color: #ccc;
 }
@@ -465,6 +463,24 @@ header .language-switch{
 	width: 270px !important;
 }
 
+.ui-dialog.preview{
+	background-color: #fff;
+	border: 2px solid #000;
+	height: 80vh !important;
+	top: 15px !important;
+}
+
+.ui-dialog.preview #patchwork-wrapper{
+	height: 100% !important;
+	overflow: hidden;
+	margin-top: -120px;
+}
+
+.ui-dialog.preview #patchwork-wrapper svg{
+	height: 100%;
+	width: auto;
+}
+
 /********** FORMS ***********/
 
 form .form-group{
@@ -478,7 +494,7 @@ form label{
 	width: 80px;
 }
 
-form input, form textarea{
+form input, form textarea, form select{
 	background-color: #fff;
 	border: 1px solid #000;
 	cursor: pointer;
@@ -576,7 +592,47 @@ footer{
 */
 /********** GALLERY ***********/
 
+#gallery .search-form{
+	float: right;
+	font-family: 'Merriweather', serif;
+	margin-top: -65px;
+	padding: 10px;
+}
+
+#gallery .search-form input{
+	border: 2px solid #800;
+	border-right: none;
+	font-size: 18px;
+	height: 30px;
+	margin-right: -5px;
+	margin-top: 5px;
+	padding: 3px;
+	vertical-align: top;
+}
+
+#gallery .search-form select{
+	border: 2px solid #800;
+	font-size: 18px;
+	height: 40px;
+	margin-top: 5px;
+	padding: 3px;
+	vertical-align: top;
+}
+
+#gallery .search-form button{
+	float: none;
+	padding: 0;
+}
+
+#gallery .search-form button svg circle,
+#gallery .search-form button svg line{
+	fill: transparent;
+	stroke: #222;
+	stroke-width: 3px;
+}
+
 #gallery .column{
+	clear: right;
 	float: left;
 	width: 25%;
 }
@@ -624,9 +680,49 @@ footer{
 	width: 100%
 }
 
-.single-patchwork .likes, .single-patchwork .views{
+.single-patchwork .likes, .single-patchwork .views, .single-patchwork .comments{
 	font-size: 11px;
 }
+
+.single-patchwork .like-form button{
+	background-color: transparent;
+	border-color: transparent;
+	margin-top: -40px;
+	outline: none;
+}
+
+.single-patchwork .like-form button svg .face,
+.single-patchwork .like-form button svg .mouth{
+	fill: transparent;
+	stroke: #000;
+	stroke-width: 2px;
+}
+
+.single-patchwork .like-form button svg .smile{
+	fill: transparent;
+	stroke: transparent;
+	stroke-width: 2px;
+	transition: 0.5s linear;
+}
+
+.single-patchwork .like-form button svg .cheek{
+	fill: transparent;
+	stroke: transparent;
+	transition: 0.4s linear;
+}
+
+.single-patchwork .like-form button:hover svg .face{
+	fill: #ff9;
+}
+
+.single-patchwork .like-form button:hover svg .cheek{
+	fill: #ffb366;
+}
+
+.single-patchwork .like-form button:hover svg .smile{
+	stroke: #000;
+}
+
 
 /********** PAGINATION ***********/
 #pagination{
@@ -641,17 +737,17 @@ footer{
 }
 
 #pagination li{
-	background-color: #fff;
-	border-style: solid;
-	border-width: 3px;
 	display: inline;
 	margin: 0 3px;
-	padding: 5px 10px;
 	text-align: center;
 }
 
 #pagination li a, #pagination li span{
+	background-color: #fff;
+	border-style: solid;
+	border-width: 3px;
 	color: inherit;
+	padding: 5px 10px;
 	text-decoration: none;
 }
 
@@ -659,55 +755,57 @@ footer{
 	color: #aaa;
 }
 
-#pagination li:nth-child(2){
+#pagination li:nth-child(2) a{
 	border-color: #080;
 	color: #060;
 }
-#pagination li:nth-child(2):hover, #pagination li:nth-child(2).active{
+#pagination li:nth-child(2):hover a, #pagination li:nth-child(2).active span{
 	background-color: #060;
 }
-#pagination li:nth-child(3){
+#pagination li:nth-child(3) a{
 	border-color: #c00;
 	color: #900;
 }
-#pagination li:nth-child(3):hover, #pagination li:nth-child(3).active{
+#pagination li:nth-child(3):hover a, #pagination li:nth-child(3).active span{
 	background-color: #900;
 }
-#pagination li:nth-child(4){
+#pagination li:nth-child(4) a {
 	border-color: #009;
 	color: #006;
 }
-#pagination li:nth-child(4):hover, #pagination li:nth-child(4).active{
+#pagination li:nth-child(4):hover a, #pagination li:nth-child(4).active span{
 	background-color: #006;
 }
-#pagination li:nth-child(5){
+#pagination li:nth-child(5) a{
 	border-color: #909;
 	color: #4d004d;
 }
-#pagination li:nth-child(5):hover, #pagination li:nth-child(5).active{
+#pagination li:nth-child(5):hover a, #pagination li:nth-child(5).active span{
 	background-color: #4d004d;
 }
-#pagination li:nth-child(6){
+#pagination li:nth-child(6) a{
 	border-color: #800;
 	color: #4d0000;
 }
-#pagination li:nth-child(6):hover, #pagination li:nth-child(6).active{
+#pagination li:nth-child(6):hover a, #pagination li:nth-child(6).active span{
 	background-color: #4d0000;
 }
-#pagination li:nth-child(7){
+#pagination li:nth-child(7) a{
 	border-color: #03c;
 	color: #002699;
 }
-#pagination li:nth-child(7):hover, #pagination li:nth-child(7).active{
+#pagination li:nth-child(7):hover a, #pagination li:nth-child(7).active span{
 	background-color: #002699;
 }
 
-#pagination li:hover, #pagination li.active{
+#pagination li:hover a, #pagination li.active span{
 	color: #fff;
 }
 
-#pagination li:first-child, #pagination li:last-child,
-#pagination li:first-child:hover, #pagination li:last-child:hover{
+#pagination li:first-child a, #pagination li:last-child a,
+#pagination li:first-child span, #pagination li:last-child span,
+#pagination li:first-child:hover a, #pagination li:last-child:hover a,
+#pagination li:first-child:hover span, #pagination li:last-child:hover span{
 	background-color: transparent;
 	border-color: transparent;
 	color: #777;

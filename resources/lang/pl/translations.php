@@ -5,7 +5,7 @@ return array (
   'gallery' => 'Galeria',
   'guest_book' => 'Księga gości',
   'authors' => 'Twórcy',
-  'meta' => 
+  'meta' =>
   array (
     'create' => 'Projektowanie',
     'gallery' => 'Galeria',
@@ -38,5 +38,16 @@ return array (
     'add_row' => 'Dodaj wiersz',
     'add_column' => 'Dodaj kolumnę',
     'preview' => 'Podgląd',
-
+'order' =>
+array (
+  'no' => 'Sortuj',
+   'created_desc' => 'od najnowszych',
+   'created_asc' => 'od najstarszych',
+   'likes_desc' => 'od najpopularniejszych',
+   'likes_asc' => 'od najmniej popularnych',
+   'views_desc' => 'od najcześciej wyświetlanych',
+   'views_asc' => 'od najrzadziej wyświetlanych'
+),
+'search' => 'Szukaj',
+'comments' => 'Komentarze'
 );

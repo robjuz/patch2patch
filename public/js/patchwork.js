@@ -234,16 +234,13 @@ $('#save-patchwork-form').submit(function (e) {
 });
 
 $('#preview-button').click(function () {
-    var createBoard = $('#create-board');
     $('#patchwork-wrapper').dialog(
         {
             'width': 0.8 * $(window).width(),
             'height': 0.8 * $(window).height(),
-            // 'left': '0px',
-             'top':'0px',
+            'top':'15px',
             dialogClass: "preview",
             title: 'Podgląd',
-            // resizable: false,
             close: function (event, ui) {
                 $('#patchwork-wrapper').dialog('destroy');
                 $('#create-board').show();
