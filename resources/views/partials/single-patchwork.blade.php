@@ -15,7 +15,7 @@
 	<div class="statistics">
 		<div class="views">@lang('translations.views', ['views' => $patchwork->views])</div>
 		<div class="likes">@lang('translations.likes', ['likes' => $patchwork->likes])</div>
-		<div class="comments">@lang('translations.comments', ['likes' => $patchwork->comments_count])</div>
+		<div class="comments">@lang('translations.comments', ['comments' => $patchwork->comments_count])</div>
 	</div>
 	@if (!in_array($patchwork->id, session()->get('likes',[])))
 		<form class="like-form" action="{{ route('patchwork.like', $patchwork) }}" method="POST">
