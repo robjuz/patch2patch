@@ -208,7 +208,7 @@ header .language-switch{
 	text-align: center;
 }
 
-#create-board{
+#create #create-board{
 	display: none;
 }
 

@@ -88,7 +88,7 @@ class PatchworkController extends Controller
     public function edit(Patchwork $patchwork)
     {
         $fabrics = Fabric::get();
-        return view('edit', compact(['patchwork', 'fabrics']));
+        return view('patchwork.edit', compact(['patchwork', 'fabrics']));
     }
 
     /**
